@@ -1,0 +1,151 @@
+//<Заголоки>====================================================================================================
+%h1 {
+    font-weight: 900;
+    @include adaptiv-font(99, 36, 1);
+    line-height: 118 / 99 * 100%;
+}
+%h2 {
+    font-weight: 500;
+    @include adaptiv-font(54, 32, 1);
+    line-height: 80 / 54 * 100%;
+}
+%h3 {
+    font-weight: 500;
+    @include adaptiv-font(45, 28, 1);
+    line-height: 67 / 45 * 100%;
+}
+%h4 {
+    font-weight: 500;
+    @include adaptiv-font(32, 24, 1);
+    line-height: 53 / 36 * 100%;
+}
+%h5 {
+    font-weight: 500;
+    @include adaptiv-font(27, 20, 1);
+    line-height: 40 / 27 * 100%;
+}
+%h6 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27 / 18 * 100%;
+}
+//</Заголовки>====================================================================================================
+
+//<Текст>====================================================================================================
+%text_sm {
+    @include adaptiv-font(16, 14, 1);
+    line-height: 26 / 16 * 100%;
+}
+%text_rg {
+    @include adaptiv-font(18, 16, 1);
+    line-height: 29 / 18 * 100%;
+}
+%text_md {
+    @include adaptiv-font(20, 18, 1);
+    line-height: 32 / 20 * 100%;
+}
+%text_lg {
+    @include adaptiv-font(22, 20, 1);
+    line-height: 35 / 22 * 100%;
+}
+//</Текст>====================================================================================================
+
+//<Иной Текст>====================================================================================================
+
+.label_lg {
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 37 / 18 * 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.label_md {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 30 / 14 * 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.label_sm {
+    font-weight: 800;
+    font-size: 12.6px;
+    line-height: 26 / 12.6 * 100%;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.misc_nav {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 30 / 14 * 100%;
+    letter-spacing: 2px;
+}
+.misc_footer {
+    font-weight: 700;
+    font-size: 12.6px;
+    line-height: 26 / 12.6 * 100%;
+    letter-spacing: 1px;
+}
+.misc_btn {
+    font-weight: 500;
+    line-height: 20 / 13.5 * 100%;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.quote_lg {
+    font-family: "Noticia Text";
+    font-style: italic;
+    @include adaptiv-font(36, 20, 1);
+    line-height: 64 / 36 * 100%;
+}
+.quote_sm {
+    font-family: "Noticia Text";
+    font-style: italic;
+    @include adaptiv-font(22.5, 18, 1);
+    line-height: 40 / 22.5 * 100%;
+}
+//</Иной Текст>====================================================================================================
+
+._c1 {
+    color: $c06;
+}
+._c2 {
+    color: $c01;
+}
+._c3 {
+    color: $c_warning;
+}
+a._c1,
+._c2,
+._c3 {
+    transition: all 0.3s ease 0s;
+    &:hover {
+        color: $c08;
+    }
+}
+
+//========================================================================================================================================================
+
+.top {
+    text-align: center;
+    @media (min-width: $md3+px) {
+        max-width: 566px;
+        margin: 0 auto;
+    }
+    &__label {
+        @extend .label_sm;
+        color: $c01;
+        @include adaptiv-value("margin-bottom", 12, 8, 1);
+    }
+
+    &__title {
+        @extend .h3;
+        @include adaptiv-value("margin-bottom", 24, 18, 1);
+    }
+
+    &__subtitle {
+        @extend .text_rg;
+        font-weight: 700;
+    }
+}

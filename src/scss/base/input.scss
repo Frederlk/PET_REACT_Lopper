@@ -1,0 +1,80 @@
+//<INPUT>
+// Снипет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.input {
+    border-radius: 0 !important;
+    width: 100%;
+    display: block;
+    padding: 0px 20px;
+    border: 1px solid #eee;
+    &:focus-visible {
+        outline-offset: rem(-1);
+        outline: white solid rem(1);
+    }
+    &._form-focus {
+    }
+    &._form-error {
+        color: red;
+    }
+}
+textarea.input {
+    resize: none;
+    padding: 0px 0px;
+}
+
+//========================================================================================================================================================
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.input {
+    width: 100%;
+    display: block;
+    min-height: 54px;
+    padding: 5px 18px;
+    background-color: $c08;
+    transition: all 0.3s ease 0s;
+    border: 2px solid $c09;
+    @extend .text_sm;
+    color: $c_maintext;
+    @media (any-hover: hover) {
+        &:hover {
+            border: 2px solid $c02;
+            box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+        }
+    }
+    &._focus {
+        color: $c_headers;
+        border: 2px solid $c06;
+    }
+    &._error {
+        border: 2px solid $c_error;
+        color: $c_error;
+    }
+    &._success {
+        border: 2px solid $c_success;
+        color: $c_success;
+    }
+    &:disabled {
+        background-color: $c_text !important;
+        border: 2px solid $c08 !important;
+    }
+}
+.form__error {
+    color: $c_error;
+}
+textarea.input {
+    resize: none;
+}
