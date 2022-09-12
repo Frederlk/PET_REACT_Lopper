@@ -14,7 +14,7 @@ const Page404: FC = () => {
                 <div className="page404__container">
                     <h2 className="page404__title">Error 404</h2>
                     <div className="page404__label">Are you lost?</div>
-                    <Link to="/" className="page404__button btn">
+                    <Link to="/" className="page404__button btn btn_rg">
                         To Home Page
                     </Link>
                 </div>

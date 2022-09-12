@@ -1,33 +1,16 @@
-//<BUTTONS (a.btn+tab)>
-// Снипет (HTML): btn
-
-.button {
-    display: inline-flex;
-    padding: 0px 0px;
-    @media (any-hover: hover) {
-        &:hover {
-        }
-    }
-    &._fw {
-        width: 100%;
-    }
-}
-
-//========================================================================================================================================================
-
 .btn {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease 0s;
     &_rg {
-        @extend .misc_btn;
-        border-radius: 36px;
-        border: 2px solid transparent;
+        @extend %misc_btn;
+        border-radius: rem(36);
+        border: rem(2) solid transparent;
         color: $c08;
         background: $c01;
-        padding: 5px 45px;
-        min-height: 36px;
+        padding: rem(5) rem(45);
+        min-height: rem(36);
         box-shadow: 0;
         @media (any-hover: hover) {
             &:hover {
@@ -36,21 +19,21 @@
         }
         &:active {
             box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
-            border: 2px solid rgba(94, 35, 157, 0.5);
+            border: rem(2) solid rgba(94, 35, 157, 0.5);
         }
         &:disabled {
             box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
-            border: 2px solid transparent;
+            border: rem(2) solid transparent;
             color: $c_text;
         }
     }
     &_news {
-        padding: 5px 28px;
-        @extend .label_sm;
+        padding: rem(5) rem(28);
+        @extend %label_sm;
         color: $c01;
-        min-height: 54px;
+        min-height: rem(54);
         background: linear-gradient(0deg, rgba(242, 242, 242, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
-        border-bottom: 2px solid $c09;
+        border-bottom: rem(2) solid $c09;
         transition: all 0.3s ease 0s;
         span {
             display: inline-flex;
@@ -58,22 +41,22 @@
             align-items: center;
             background-color: transparent;
             border-radius: 50%;
-            @include adaptiv-value("margin-left", 20, 10, 1);
-            border: 1px solid $c01;
-            width: 27px;
-            flex: 0 0 27px;
-            height: 27px;
+            @include adaptiveValue("margin-left", 20, 10);
+            border: rem(2) solid $c01;
+            width: rem(27);
+            flex: 0 0 rem(27);
+            height: rem(27);
             transition: all 0.3s ease 0s;
             &::before {
                 color: $c01;
-                font-size: 11px;
+                font-size: rem(11);
             }
         }
         @media (any-hover: hover) {
             &:hover {
                 span {
                     background-color: $c01;
-                    border: 1px solid rgba(246, 16, 103, 0.5);
+                    border: rem(1) solid rgba(246, 16, 103, 0.5);
                     &::before {
                         color: $c08;
                     }
@@ -85,7 +68,7 @@
             color: $c08;
             span {
                 background-color: transparent !important;
-                border: 1px solid $c08 !important;
+                border: rem(1) solid $c08 !important;
                 &::before {
                     color: $c08;
                 }

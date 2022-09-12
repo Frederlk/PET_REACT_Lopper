@@ -1,109 +1,110 @@
 //<Заголоки>====================================================================================================
 %h1 {
     font-weight: 900;
-    @include adaptiv-font(99, 36, 1);
-    line-height: 118 / 99 * 100%;
+    @include adaptiveValue("font-size", 99, 36);
+    line-height: math.div(118, 99);
 }
 %h2 {
     font-weight: 500;
-    @include adaptiv-font(54, 32, 1);
-    line-height: 80 / 54 * 100%;
+    @include adaptiveValue("font-size", 54, 32);
+    line-height: math.div(80, 54);
 }
 %h3 {
     font-weight: 500;
-    @include adaptiv-font(45, 28, 1);
-    line-height: 67 / 45 * 100%;
+    @include adaptiveValue("font-size", 45, 28);
+    line-height: math.div(67, 45);
 }
 %h4 {
     font-weight: 500;
-    @include adaptiv-font(32, 24, 1);
-    line-height: 53 / 36 * 100%;
+    @include adaptiveValue("font-size", 32, 24);
+    line-height: math.div(53, 36);
 }
 %h5 {
     font-weight: 500;
-    @include adaptiv-font(27, 20, 1);
-    line-height: 40 / 27 * 100%;
+    @include adaptiveValue("font-size", 27, 20);
+    line-height: math.div(40, 27);
 }
 %h6 {
     font-weight: 500;
-    font-size: 18px;
-    line-height: 27 / 18 * 100%;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
 }
 //</Заголовки>====================================================================================================
 
 //<Текст>====================================================================================================
 %text_sm {
-    @include adaptiv-font(16, 14, 1);
-    line-height: 26 / 16 * 100%;
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(26, 16);
 }
 %text_rg {
-    @include adaptiv-font(18, 16, 1);
-    line-height: 29 / 18 * 100%;
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(29, 18);
 }
 %text_md {
-    @include adaptiv-font(20, 18, 1);
-    line-height: 32 / 20 * 100%;
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: math.div(32, 20);
 }
 %text_lg {
-    @include adaptiv-font(22, 20, 1);
-    line-height: 35 / 22 * 100%;
+    @include adaptiveValue("font-size", 22, 20);
+    line-height: math.div(35, 22);
 }
 //</Текст>====================================================================================================
 
 //<Иной Текст>====================================================================================================
 
-.label_lg {
+%label_lg {
     font-weight: 800;
-    font-size: 18px;
-    line-height: 37 / 18 * 100%;
-    letter-spacing: 4px;
+    font-size: rem(18);
+    line-height: math.div(37, 18);
+    letter-spacing: rem(4);
     text-transform: uppercase;
 }
-.label_md {
+%label_md {
     font-weight: 800;
-    font-size: 14px;
-    line-height: 30 / 14 * 100%;
-    letter-spacing: 4px;
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    letter-spacing: rem(4);
     text-transform: uppercase;
 }
-.label_sm {
+%label_sm {
     font-weight: 800;
-    font-size: 12.6px;
-    line-height: 26 / 12.6 * 100%;
-    letter-spacing: 4px;
+    font-size: rem(13);
+    line-height: math.div(26, 13);
+    letter-spacing: rem(4);
     text-transform: uppercase;
 }
 
-.misc_nav {
+%misc_nav {
     font-weight: 800;
-    font-size: 14px;
-    line-height: 30 / 14 * 100%;
-    letter-spacing: 2px;
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    letter-spacing: rem(2);
 }
-.misc_footer {
+%misc_footer {
     font-weight: 700;
-    font-size: 12.6px;
-    line-height: 26 / 12.6 * 100%;
-    letter-spacing: 1px;
+    font-size: rem(13);
+    line-height: math.div(26, 13);
+    letter-spacing: rem(1);
 }
-.misc_btn {
+%misc_btn {
     font-weight: 500;
-    line-height: 20 / 13.5 * 100%;
-    letter-spacing: 2px;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    letter-spacing: rem(2);
     text-transform: uppercase;
 }
 
-.quote_lg {
+%quote_lg {
     font-family: "Noticia Text";
     font-style: italic;
-    @include adaptiv-font(36, 20, 1);
-    line-height: 64 / 36 * 100%;
+    @include adaptiveValue("font-size", 36, 20);
+    line-height: math.div(64, 36);
 }
-.quote_sm {
+%quote_sm {
     font-family: "Noticia Text";
     font-style: italic;
-    @include adaptiv-font(22.5, 18, 1);
-    line-height: 40 / 22.5 * 100%;
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: math.div(40, 22);
 }
 //</Иной Текст>====================================================================================================
 
@@ -119,7 +120,7 @@
 a._c1,
 ._c2,
 ._c3 {
-    transition: all 0.3s ease 0s;
+    transition: color 0.3s ease 0s;
     &:hover {
         color: $c08;
     }
@@ -129,23 +130,66 @@ a._c1,
 
 .top {
     text-align: center;
-    @media (min-width: $md3+px) {
-        max-width: 566px;
+    @media (min-width: $mobile) {
+        max-width: rem(566);
         margin: 0 auto;
     }
     &__label {
-        @extend .label_sm;
+        @extend %label_sm;
         color: $c01;
-        @include adaptiv-value("margin-bottom", 12, 8, 1);
+        @include adaptiveValue("margin-bottom", 12, 8);
     }
 
     &__title {
-        @extend .h3;
-        @include adaptiv-value("margin-bottom", 24, 18, 1);
+        @extend %h3;
+        @include adaptiveValue("margin-bottom", 24, 18);
     }
 
     &__subtitle {
-        @extend .text_rg;
+        @extend %text_rg;
         font-weight: 700;
+    }
+}
+
+//========================================================================================================================================================
+
+.page404 {
+    padding: rem(200) 0;
+    text-align: center;
+
+    &__container {
+    }
+
+    &__title {
+        @extend %h1;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__label {
+        @extend %text_md;
+        &:not(:last-child) {
+            margin-bottom: rem(20);
+        }
+    }
+
+    &__button {
+        min-width: rem(160);
+    }
+}
+
+//========================================================================================================================================================
+
+.spinner {
+    text-align: center;
+    margin: rem(100) auto;
+    @include adaptiveValue("width", 300, 150, 991.98, 479.98, 1);
+    @include adaptiveValue("heigth", 300, 150, 991.98, 479.98, 1);
+    svg {
+        circle {
+            fill: $mainColor;
+        }
+        max-width: 100%;
     }
 }

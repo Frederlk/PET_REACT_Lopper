@@ -1,9 +1,13 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import { Link } from "react-router-dom";
+import useMenu from "../store/slices/menu/useMenu";
 
 const Header: FC = () => {
+    const ref = useRef(null);
+    const { onToggleMenu } = useMenu(ref);
+
     return (
-        <header className="header">
+        <header className="header" data-lp ref={ref}>
             <div className="header__container ">
                 <div className="header__logo">
                     <Link to="/" className="header__logo-link">
@@ -11,30 +15,33 @@ const Header: FC = () => {
                     </Link>
                 </div>
                 <div className="header__menu">
-                    <nav className="header__body-menu">
-                        <ul className="menu__list" data-da=".menu__container,600,first">
+                    <nav className="header__body-menu" data-da=".menu__container,600,first">
+                        <ul className="menu__list">
                             <li className="menu__item">
-                                <Link to="#" className="menu__link _active">
+                                <Link to="/" className="menu__link _active">
                                     Home
                                 </Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="#" className="menu__link">
+                                <Link to="/services" className="menu__link">
                                     Services
                                 </Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="#" className="menu__link">
+                                <Link to="/work" className="menu__link">
                                     Work
                                 </Link>
                             </li>
                             <li className="menu__item">
-                                <Link to="#" className="menu__link">
+                                <Link to="/about" className="menu__link">
                                     About
                                 </Link>
                             </li>
                         </ul>
                     </nav>
+                    <div className="menu__body" data-lp>
+                        <div className="menu__container">BASE</div>
+                    </div>
                 </div>
                 <div className="header__phone">
                     <a href="tel:01666693456" className="header__phone-link _icon-phone">
@@ -42,10 +49,7 @@ const Header: FC = () => {
                     </a>
                 </div>
                 <div className="header__burger menu">
-                    <nav className="menu__body">
-                        <div className="menu__container">sfijfiowjf</div>
-                    </nav>
-                    <button type="button" className="menu__icon icon-menu">
+                    <button type="button" onClick={onToggleMenu} className="menu__icon icon-menu">
                         <span></span>
                     </button>
                 </div>

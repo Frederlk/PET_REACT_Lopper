@@ -3,7 +3,8 @@
     @font-face {
         font-family: $font_name;
         font-display: swap;
-        src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}.woff") format("woff");
+        src: url("../../assets/fonts/#{$file_name}.woff2") format("woff2"),
+            url("../../assets/fonts/#{$file_name}.woff") format("woff");
         font-weight: #{$weight};
         font-style: #{$style};
     }
@@ -23,14 +24,6 @@
     $result: math.div($px, $current) + em;
     @return $result;
 }
-//Адаптивное свойство
-
-//Currency
-@mixin currency($sym) {
-    &::after {
-        content: "#{$sym}";
-    }
-}
 
 // Grids
 @mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
@@ -40,7 +33,14 @@
 }
 
 // Адаптивное свойство (clamp)
-@mixin adaptiveValue($property, $startSize, $minSize, $widthFrom: $containerWidth, $widthTo: $minWidth, $keepSize: 0) {
+@mixin adaptiveValue(
+    $property,
+    $startSize,
+    $minSize,
+    $widthFrom: $containerWidth,
+    $widthTo: $minWidth,
+    $keepSize: 0
+) {
     @if ($startSize==0) {
         $startSize: 0.000001;
     }
@@ -81,7 +81,8 @@
     // Если не поддерживается clamp();
     @supports not (#{$property}: $propertyValue) {
         #{$property}: calc(
-            #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) - math.div($widthTo, 16)}
+            #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div($widthFrom, 16) -
+                math.div($widthTo, 16)}
         );
     }
 
