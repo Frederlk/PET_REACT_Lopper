@@ -12,10 +12,10 @@ export const menuSlice = createSlice({
     name: "@@menu",
     initialState,
     reducers: {
-        openMenu: (state) => {
+        menuOpened: (state) => {
             state.menuStatus = true;
         },
-        closeMenu: (state) => {
+        menuClosed: (state) => {
             state.menuStatus = false;
         },
     },

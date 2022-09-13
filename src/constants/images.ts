@@ -1,4 +1,4 @@
-import bg from "./../assets/img/bg.jpg";
+import bg from "../assets/img/map.svg";
 
 const defaultImages = {
     bg,

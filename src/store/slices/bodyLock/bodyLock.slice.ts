@@ -12,10 +12,10 @@ export const bodyLockSlice = createSlice({
     name: "@@bodyLock",
     initialState,
     reducers: {
-        setLock: (state) => {
+        bodyLocked: (state) => {
             state.lockStatus = true;
         },
-        setUnlock: (state) => {
+        bodyUnlocked: (state) => {
             state.lockStatus = false;
         },
     },

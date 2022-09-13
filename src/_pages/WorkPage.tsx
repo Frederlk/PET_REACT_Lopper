@@ -1,6 +1,6 @@
 import React from "react";
 
-const TeamPage = () => {
+const WorkPage = () => {
     return (
         <>
             <section className="page__preview preview">
@@ -266,4 +266,4 @@ const TeamPage = () => {
     );
 };
 
-export default TeamPage;
+export default WorkPage;

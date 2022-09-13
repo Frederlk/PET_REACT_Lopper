@@ -1,4 +1,5 @@
 import { useActions, useClickOutside, useEventListener } from "../../../hooks";
+import useBodyLock from "../bodyLock/useBodyLock";
 import { useAppSelector } from "../../../hooks/useRedux";
 
 type ReturnType = {
@@ -8,24 +9,25 @@ type ReturnType = {
 };
 
 const useMenu = (ref?: any): ReturnType => {
-    const { closeMenu, openMenu, setLock, setUnlock } = useActions();
+    const { menuOpened, menuClosed } = useActions();
 
-    const { lockStatus } = useAppSelector((state) => state.bodyLock);
     const { menuStatus } = useAppSelector((state) => state.menu);
+    const { lockStatus } = useAppSelector((state) => state.bodyLock);
+    const { bodyLock, bodyUnlock } = useBodyLock(lockStatus);
 
     const onOpenMenu = () => {
         if (!lockStatus && !menuStatus) {
-            setLock();
+            bodyLock();
             document.documentElement.classList.add("menu-open");
-            openMenu();
+            menuOpened();
         }
     };
 
     const onCloseMenu = () => {
         if (lockStatus && menuStatus) {
-            closeMenu();
+            menuClosed();
             document.documentElement.classList.remove("menu-open");
-            setUnlock();
+            bodyUnlock();
         }
     };
 

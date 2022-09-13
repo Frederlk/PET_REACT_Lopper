@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import useEventListener from "./useEventListener";
 
 const usePageScroll = () => {

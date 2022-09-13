@@ -1,14 +1,13 @@
-import { FC, lazy, Suspense, useEffect } from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { FC, Suspense, useEffect } from "react";
+import { useLocation, useRoutes } from "react-router-dom";
 
 import { Spinner } from "./_components";
-import useLockedBody from "./store/slices/bodyLock/useLockedBody";
-import { useAppSelector } from "./hooks/useRedux";
 import { useEventListener } from "./hooks";
 import { Footer, Header } from "./_containers";
 import useMenu from "./store/slices/menu/useMenu";
-
-const Page404 = lazy(() => import("./_pages/Page404"));
+import dynamicAdaptive from "./helpers/dynamic_adapt";
+import { spollers, _closeAllSpollers } from "./helpers/functions";
+import { routesConfig } from "./routes";
 
 const ScrollToTop = () => {
     const { pathname } = useLocation();
@@ -17,14 +16,12 @@ const ScrollToTop = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         onCloseMenu();
+        _closeAllSpollers();
     }, [pathname]);
     return null;
 };
 
 const App: FC = () => {
-    const { lockStatus } = useAppSelector((state) => state.bodyLock);
-    useLockedBody(lockStatus);
-
     useEventListener("scroll", function () {
         const doc = document.documentElement;
         const scrollTop = window.scrollY;
@@ -35,16 +32,19 @@ const App: FC = () => {
         }
     });
 
+    useEffect(() => {
+        dynamicAdaptive();
+        spollers();
+    }, []);
+
+    const routes = useRoutes(routesConfig);
+
     return (
         <>
             <ScrollToTop />
             <Header />
             <main className="page">
-                <Suspense fallback={<Spinner />}>
-                    <Routes>
-                        <Route path="*" element={<Page404 />} />
-                    </Routes>
-                </Suspense>
+                <Suspense fallback={<Spinner />}>{routes}</Suspense>
             </main>
             <Footer />
         </>
