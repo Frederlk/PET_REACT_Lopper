@@ -24,6 +24,37 @@
             opacity: 1;
             visibility: visible;
         }
+        .header__logo-link {
+            color: $c08;
+        }
+        .header__phone-link {
+            color: $c08;
+            @media (any-hover: hover) {
+                &:hover {
+                    color: $c01;
+                }
+            }
+        }
+        .menu__container {
+            color: $c08;
+        }
+        .menu__body {
+            background-color: $c05;
+            &::before {
+                background-color: $c05;
+            }
+        }
+        .menu__link {
+            color: $c08;
+            &::after {
+                background: $c08;
+            }
+        }
+        .icon-menu {
+            span {
+                background-color: $c08;
+            }
+        }
     }
 
     &__container {
@@ -50,7 +81,10 @@
         @include adaptiveValue("font-size", 24, 20);
         line-height: math.div(43, 24);
         letter-spacing: rem(2);
-        color: $c08;
+        color: $c04;
+        .home-wrapper & {
+            color: $c08;
+        }
     }
 
     &__menu {
@@ -71,7 +105,10 @@
         align-items: center;
         @extend %misc_nav;
         transition: color 0.3s ease 0s;
-        color: $c08;
+        color: $c_headers;
+        .home-wrapper & {
+            color: $c08;
+        }
         &::before {
             margin-right: rem(18);
             @include adaptiveValue("font-size", 29, 20);
@@ -104,7 +141,7 @@
         height: 100%;
         top: 0;
         left: 0;
-        background-color: $c05;
+        background-color: $c08;
         overflow: auto;
         opacity: 0;
         visibility: hidden;
@@ -118,10 +155,16 @@
             height: rem(70);
             top: 0;
             left: 0;
-            background-color: $c05;
+            background-color: $c08;
             opacity: 0;
             visibility: hidden;
             z-index: 11;
+        }
+        .home-wrapper & {
+            background-color: $c05;
+            &::before {
+                background-color: $c05;
+            }
         }
         .menu-open & {
             opacity: 1;
@@ -134,10 +177,13 @@
     }
 
     &__container {
-        @include adaptiveValue("margin-top", 100, 20, 1170, 600.98, 1);
-        color: $c08;
         display: flex;
         @include adaptiveValue("column-gap", 100, 50, 1170, 600.98, 1);
+        @include adaptiveValue("margin-top", 100, 20, 1170, 600.98, 1);
+        color: $c_headers;
+        .home-wrapper & {
+            color: $c08;
+        }
         @media (max-width: em(600.98)) {
             gap: rem(20);
             justify-content: space-between;
@@ -171,9 +217,9 @@
 
     &__link {
         @extend %misc_nav;
-        color: $c08;
         position: relative;
         opacity: 0.8;
+        color: $c_headers;
         transition: opacity 0.3s ease 0s;
         &::after {
             content: "";
@@ -182,7 +228,7 @@
             height: rem(1);
             bottom: rem(-6);
             left: 50%;
-            background: $c08;
+            background-color: $c_headers;
             transform: translate(-50%, 0px);
             transition: width 0.3s ease 0s;
         }
@@ -192,6 +238,12 @@
                 &::after {
                     width: calc(100% - rem(12));
                 }
+            }
+        }
+        .home-wrapper & {
+            color: $c08;
+            &::after {
+                background-color: $c08;
             }
         }
         &.active {
@@ -210,7 +262,7 @@
 
     &__label {
         @extend %label_sm;
-        color: $c08;
+        color: $c_headers;
         position: relative;
         display: inline-flex;
         padding-bottom: rem(5);
@@ -224,6 +276,9 @@
             height: rem(1);
             background-color: $c01;
         }
+        .home-wrapper & {
+            color: $c08;
+        }
         @media (max-width: $mobileSmall) {
             display: flex;
             justify-content: space-between;
@@ -235,6 +290,12 @@
 
     &__socials {
         margin-top: rem(20);
+        .socials__link {
+            color: $c_headers;
+            .home-wrapper & {
+                color: $c08;
+            }
+        }
     }
 
     &_icon {
@@ -261,7 +322,10 @@
         position: absolute;
         width: 100%;
         height: rem(2);
-        background-color: $c08;
+        background-color: $c_headers;
+        .home-wrapper & {
+            background-color: $c08;
+        }
     }
     &::before {
         top: 0;

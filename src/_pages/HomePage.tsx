@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Intro from "../_containers/HomePage/Intro";
 import Mainscreen from "../_containers/HomePage/Mainscreen";
 
 const HomePage: FC = () => {
@@ -6,43 +7,7 @@ const HomePage: FC = () => {
         <>
             <Mainscreen />
 
-            <section className="page__intro intro">
-                <div className="intro__wrapper">
-                    <div className="intro__content">
-                        <div className="intro__container _container">
-                            <div className="intro__inner">
-                                <div className="intro__label">Intro</div>
-                                <h2 className="intro__title">Our future</h2>
-                                <div className="intro__subtitle">
-                                    Apparently we had reached a great height in the atmosphere, for the sky
-                                    was a dead black, and the stars had ceased to twinkle.
-                                </div>
-                                <p className="intro__text">
-                                    By the same illusion which lifts the horizon of the sea to the level of
-                                    the spectator on a hillside, the sable cloud beneath was dished out, and
-                                    the car seemed to float in the middle of an immense dark sphere, whose
-                                    upper half was strewn with silver.
-                                </p>
-                                <a href="#" className="intro__btn btn btn_rg">
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="intro__picture-wrap">
-                        <div className="intro__picture-inner">
-                            <div className="intro__image _ibg">
-                                <img src="img/content/02.jpg" alt="" />
-                            </div>
-                            <div className="intro__quote-wrap">
-                                <div className="intro__quote">
-                                    Commodo sed egestas egestas fringilla phasellus faucibus.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Intro />
 
             <section className="page__benefits benefits">
                 <div className="benefits__wrapper">

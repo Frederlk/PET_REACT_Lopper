@@ -155,16 +155,14 @@ a._c1,
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @include adaptiveValue("gap", 42, 18);
     &__link {
         @include adaptiveValue("margin-bottom", 18, 12);
         transition: color 0.3s ease 0s;
         color: $c08;
-        &:not(:last-child) {
-            @include adaptiveValue("margin-right", 42, 18);
-        }
         @media (any-hover: hover) {
             &:hover {
-                color: $c01;
+                color: $c01 !important;
             }
         }
     }

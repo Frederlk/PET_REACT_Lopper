@@ -31,7 +31,7 @@ const Mainscreen: FC = () => {
                         <div className="mainscreen__text-scroll">Scroll to see more</div>
                         <LinkGoto
                             className="mainscreen__btn-scroll _icon-arrow_down"
-                            to="page__intro"
+                            to="intro"
                             smooth={true}
                             hashSpy={true}
                             offset={-60}
