@@ -1,25 +1,10 @@
 import { FC, Suspense, useEffect } from "react";
-import { useLocation, useRoutes } from "react-router-dom";
 
-import { Spinner } from "./_components";
+import { AppRouter, Spinner } from "./_components";
 import { useEventListener } from "./hooks";
 import { Footer, Header } from "./_containers";
-import useMenu from "./store/slices/menu/useMenu";
 import dynamicAdaptive from "./helpers/dynamic_adapt";
-import { spollers, _closeAllSpollers } from "./helpers/functions";
-import { routesConfig } from "./routes";
-
-const ScrollToTop = () => {
-    const { pathname } = useLocation();
-    const { onCloseMenu } = useMenu();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-        onCloseMenu();
-        _closeAllSpollers();
-    }, [pathname]);
-    return null;
-};
+import { spollers } from "./helpers/functions";
 
 const App: FC = () => {
     useEventListener("scroll", function () {
@@ -37,14 +22,13 @@ const App: FC = () => {
         spollers();
     }, []);
 
-    const routes = useRoutes(routesConfig);
-
     return (
         <>
-            <ScrollToTop />
             <Header />
             <main className="page">
-                <Suspense fallback={<Spinner />}>{routes}</Suspense>
+                <Suspense fallback={<Spinner />}>
+                    <AppRouter />
+                </Suspense>
             </main>
             <Footer />
         </>

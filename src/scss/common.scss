@@ -151,6 +151,25 @@ a._c1,
     }
 }
 
+.socials {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    &__link {
+        @include adaptiveValue("margin-bottom", 18, 12);
+        transition: color 0.3s ease 0s;
+        color: $c08;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-right", 42, 18);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c01;
+            }
+        }
+    }
+}
+
 //========================================================================================================================================================
 
 .page404 {

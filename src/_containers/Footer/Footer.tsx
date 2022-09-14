@@ -1,10 +1,9 @@
-import { FC, memo, useCallback, useMemo } from "react";
+import { FC, memo, useCallback } from "react";
 import { format } from "date-fns";
-import { Link } from "react-router-dom";
 
 import { routesConfig } from "../../routes";
 import { FooterLink, FooterList } from "..";
-import { data } from "../../constants";
+import { Logo, Socials } from "../../_components";
 
 const Footer: FC = () => {
     const links = useCallback(
@@ -16,16 +15,12 @@ const Footer: FC = () => {
         [routesConfig]
     );
 
-    const socialLinks = useMemo(() => data.socialLinks, [data.socialLinks]);
-
     return (
         <footer className="footer">
             <div className="footer__container">
                 <div className="footer__inner" data-spollers="479.98,max">
                     <div className="footer__lopper">
-                        <Link to="/" className="footer__logo">
-                            Lopper
-                        </Link>
+                        <Logo className="footer__logo" />
                         <p className="footer__text">Eu augue ut lectus arcu bibendum at.</p>
                     </div>
 
@@ -57,17 +52,7 @@ const Footer: FC = () => {
 
                     <div className="footer__follow">
                         <h6 className="footer__label">Follow us</h6>
-                        <div className="footer__socials">
-                            {socialLinks.map(({ link, iconClass }, i) => (
-                                <a
-                                    href={link}
-                                    key={link + i}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    className={`footer__social ${iconClass}`}
-                                ></a>
-                            ))}
-                        </div>
+                        <Socials className="footer__socials" />
                     </div>
                 </div>
                 <div className="footer__copy">

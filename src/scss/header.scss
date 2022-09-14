@@ -2,9 +2,8 @@
     position: fixed;
     width: 100%;
     left: 0;
-    @include adaptiveValue("top", 52, 0, 1170, 600, 1);
-    transition: top 0.5s ease 0s;
-    background-color: $c05;
+    @include adaptiveValue("top", 52, 0, 1170, 600.98, 1);
+    transition: top 0.5s ease 0s, background-color 0.5s ease 0s;
     z-index: 100;
     &::after {
         content: "";
@@ -13,21 +12,22 @@
         height: 100%;
         top: 0;
         left: 0;
-        background-color: $c05;
         opacity: 0;
         visibility: hidden;
         transition: opacity 0.5s ease 0s, visibility 0.5s ease 0s;
     }
     ._scroll & {
         top: 0;
+        background-color: $c05;
         &::after {
+            background-color: $c05;
             opacity: 1;
             visibility: visible;
         }
     }
 
     &__container {
-        min-height: rem(48);
+        min-height: rem(60);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -134,30 +134,37 @@
     }
 
     &__container {
-        @include adaptiveValue("margin-top", 100, 0, 1170, 600, 1);
+        @include adaptiveValue("margin-top", 100, 20, 1170, 600.98, 1);
         color: $c08;
+        display: flex;
+        @include adaptiveValue("column-gap", 100, 50, 1170, 600.98, 1);
+        @media (max-width: em(600.98)) {
+            gap: rem(20);
+            justify-content: space-between;
+        }
+        @media (max-width: $mobileSmall) {
+            display: block;
+        }
     }
 
     &__list {
         position: relative;
         z-index: 20;
-        @media (min-width: em(600)) {
+        @media (min-width: em(600.98)) {
             display: flex;
             align-items: center;
             margin: 0px rem(10);
+            @include adaptiveValue("column-gap", 54, 20, 1170, 600.98, 1);
         }
-        @media (max-width: em(600)) {
-            margin-bottom: rem(20);
+        @media (max-width: em(600.98)) {
+            @include adaptiveValue("margin-bottom", 10, 5, 600.98, 320, 1);
         }
     }
 
     &__item {
         &:not(:last-child) {
-            @media (min-width: em(600)) {
-                @include adaptiveValue("margin-right", 54, 20, 1170, 600, 1);
-            }
-            @media (max-width: em(600)) {
-                @include adaptiveValue("margin-bottom", 20, 10, 600, 320, 1);
+            @media (max-width: em(600.98)) {
+                @include adaptiveValue("margin-bottom", 10, 5, 600.98, 320, 1);
             }
         }
     }
@@ -193,6 +200,41 @@
                 width: calc(100% - rem(12));
             }
         }
+    }
+
+    &__block {
+        &:not(:last-child) {
+            @include adaptiveValue("margin-bottom", 20, 15, 600.98, 320, 1);
+        }
+    }
+
+    &__label {
+        @extend %label_sm;
+        color: $c08;
+        position: relative;
+        display: inline-flex;
+        padding-bottom: rem(5);
+        margin-bottom: rem(10);
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - rem(5));
+            height: rem(1);
+            background-color: $c01;
+        }
+        @media (max-width: $mobileSmall) {
+            display: flex;
+            justify-content: space-between;
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &__socials {
+        margin-top: rem(20);
     }
 
     &_icon {
