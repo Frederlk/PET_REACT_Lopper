@@ -1,7 +1,9 @@
-import bg from "../assets/img/map.svg";
+import bgMain from "../assets/img/content/01.jpg";
+import bgMain_WEBP from "../assets/img/content/01.webp";
 
 const defaultImages = {
-    bg,
+    bgMain,
+    bgMain_WEBP,
 };
 
 export default { defaultImages };

@@ -4,8 +4,8 @@ interface PictureProps {
     srcWebp: string;
     alt: string;
     fallbackSrc: string;
-    mediaType: string;
-    noLazy: boolean;
+    mediaType?: string;
+    noLazy?: boolean;
 }
 
 const Picture: FC<PictureProps> = ({

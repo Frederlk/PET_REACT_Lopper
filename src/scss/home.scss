@@ -1,3 +1,242 @@
+.mainscreen {
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 10;
+        @media (min-width: $mobile) {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+
+    &__flex {
+        display: flex;
+        justify-content: space-between;
+        padding-top: rem(150);
+        padding-bottom: rem(80);
+        flex: 1 1 auto;
+        @media (max-width: $mobile) {
+            min-height: 100vh;
+            padding-bottom: rem(30);
+            flex-direction: column;
+        }
+        @media (max-width: em(600.98)) {
+            padding-top: rem(100);
+        }
+    }
+
+    &__content {
+        @media (min-width: $mobile) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__label {
+        @extend %label_md;
+        color: $c08;
+        margin-bottom: rem(18);
+    }
+
+    &__title {
+        color: $c08;
+        margin-bottom: rem(70);
+        @extend %h1;
+        span {
+            color: $c01;
+        }
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: rem(685);
+        margin-right: rem(20);
+        @include adaptiveValue("padding-right", 40, 20, 991.98, 479.98, 1);
+        @include adaptiveValue("padding-top", 30, 20, 991.98, 479.98, 1);
+        @include adaptiveValue("padding-bottom", 30, 20, 991.98, 479.98, 1);
+        border: rem(1) solid rgba(255, 255, 255, 0.25);
+        border-left: none;
+        position: relative;
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1000%;
+            height: rem(1);
+            background: rgba(255, 255, 255, 0.25);
+            right: 100%;
+        }
+        &::before {
+            top: rem(-1);
+        }
+        &::after {
+            bottom: rem(-1);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                .mainscreen__text {
+                    color: $c01;
+                }
+            }
+        }
+        @media (max-width: $mobile) {
+            max-width: 85%;
+            margin-right: 0;
+        }
+        @media (max-width: $mobileSmall) {
+            max-width: none;
+        }
+    }
+
+    &__text {
+        color: $c08;
+        transition: color 0.3s ease 0s;
+    }
+
+    &__btn {
+        margin-left: rem(20);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        flex: 0 0 rem(48);
+        height: rem(48);
+        overflow: hidden;
+        border: rem(1) solid rgba(255, 255, 255, 0.5);
+        position: relative;
+        transition: border 0.3s ease 0s;
+        &::after {
+            content: "";
+            background-color: $c08;
+            opacity: 0.05;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: opacity 0.3s ease 0s;
+        }
+        span {
+            font-size: rem(8);
+            color: $c08;
+            transition: color 0.3s ease 0s;
+            &::before {
+                color: inherit;
+            }
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                border: rem(1) solid $c08;
+                span {
+                    color: $c01;
+                }
+                &::after {
+                    opacity: 0.1;
+                }
+            }
+        }
+    }
+
+    &__scrolldown {
+        display: flex;
+        align-items: center;
+        @media (min-width: $mobile) {
+            flex: 0 0 rem(29);
+            max-width: rem(29);
+            height: rem(29);
+            transform: rotate(90deg);
+        }
+        @media (max-width: $mobile) {
+            justify-content: center;
+            margin-top: rem(35);
+        }
+    }
+
+    &__text-scroll {
+        color: $c08;
+        @extend %label_sm;
+        @include adaptiveValue("margin-right", 50, 20, 1170, 600.98, 1);
+        white-space: nowrap;
+        letter-spacing: rem(6);
+    }
+
+    &__btn-scroll {
+        cursor: pointer;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: rem(20);
+        height: rem(46);
+        border: rem(1) solid rgba(255, 255, 255, 0.5);
+        border-radius: rem(20);
+        transition: color 0.3s ease 0s, border 0.3s ease 0s;
+        &::before {
+            font-size: rem(27);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c01;
+                border: rem(1) solid $c08;
+            }
+        }
+
+        animation: arrow 2s infinite ease;
+        @keyframes arrow {
+            0% {
+                color: $c08;
+            }
+            50% {
+                color: $c01;
+            }
+            100% {
+                color: $c08;
+            }
+        }
+
+        @media (min-width: $mobile) {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__image-ibg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        img {
+            filter: grayscale(100%);
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+            background-color: $c02;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+            background: linear-gradient(90deg, $c02 0%, rgba(196, 196, 196, 0) 56.77%);
+            z-index: 3;
+        }
+    }
+}
+
 // .preview {
 //     &_gallery {
 //         .preview__wrapper {
@@ -44,7 +283,7 @@
 //             top: 0;
 //             left: 0;
 //             mix-blend-mode: multiply;
-//             background: #5e239d;
+//             background: $c02;
 //             z-index: 2;
 //         }
 //         &::after {
@@ -55,7 +294,7 @@
 //             top: 0;
 //             left: 0;
 //             mix-blend-mode: multiply;
-//             background: linear-gradient(90deg, #5e239d 0%, rgba(196, 196, 196, 0) 56.77%);
+//             background: linear-gradient(90deg, $c02 0%, rgba(196, 196, 196, 0) 56.77%);
 //             z-index: 3;
 //         }
 //     }

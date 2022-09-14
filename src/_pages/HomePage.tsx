@@ -1,42 +1,10 @@
-import React from "react";
+import { FC } from "react";
+import Mainscreen from "../_containers/HomePage/Mainscreen";
 
-const HomePage = () => {
+const HomePage: FC = () => {
     return (
         <>
-            <section className="page__mainscreen mainscreen">
-                <div className="mainscreen__wrapper">
-                    <div className="mainscreen__inner">
-                        <div className="mainscreen__container _container">
-                            <div className="mainscreen__flex">
-                                <div className="mainscreen__content">
-                                    <div className="mainscreen__label">What we do?</div>
-                                    <h1 className="mainscreen__title">
-                                        We grow <br />
-                                        <span>great business</span>
-                                    </h1>
-                                    <a href="#" className="mainscreen__bottom">
-                                        <div className="mainscreen__text">
-                                            Velit laoreet id donec ultrices. Ut lectus arcu bibendum varius.
-                                        </div>
-                                        <div className="mainscreen__btn">
-                                            <span className="_icon-arrow_2"></span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div className="mainscreen__scrolldown">
-                                    <div className="mainscreen__text-scroll">Scroll to see more</div>
-                                    <a href="#" className="mainscreen__btn-scroll _icon-arrow_down"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="mainscreen__bg">
-                        <div className="mainscreen__image _ibg">
-                            <img src="img/content/01.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Mainscreen />
 
             <section className="page__intro intro">
                 <div className="intro__wrapper">
