@@ -240,6 +240,8 @@
 //========================================================================================================================================================
 
 .intro {
+    position: relative;
+    z-index: 2;
     @media (min-width: $mobile) {
         display: flex;
     }
@@ -314,7 +316,7 @@
         }
         @media (min-width: $tablet) {
             @include adaptiveValue("padding-top", 144, 40);
-            margin-top: rem(-85);
+            margin-bottom: rem(-85);
         }
         @media (min-width: $mobile) and (max-width: $tablet) {
             flex-direction: column;
@@ -347,7 +349,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-left: rem(-132);
+        @include adaptiveValue("margin-left", -132, -96, 1170, 991.98, 1);
         flex: 1 1 auto;
         position: relative;
         z-index: 3;
@@ -392,7 +394,8 @@
         @extend %quote_sm;
         color: $c08;
         position: relative;
-        padding-top: rem(40) 0;
+        padding-top: rem(40);
+        padding-bottom: rem(40);
         &::before {
             content: "“";
         }
@@ -400,8 +403,8 @@
             content: "”";
         }
         @media (min-width: $tablet) {
-            @include adaptiveValue("padding-left", 60, 10);
-            @include adaptiveValue("padding-right", 60, 10);
+            @include adaptiveValue("padding-left", 60, 20, 1170, 991.98, 1);
+            @include adaptiveValue("padding-right", 60, 20, 1170, 991.98, 1);
             &::after,
             &::before {
                 position: absolute;
@@ -430,6 +433,240 @@
         @media (max-width: $tablet) {
             padding: rem(10) rem(18);
             width: 100%;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.benefits {
+    overflow: hidden;
+    @media (min-width: $mobile) {
+        display: flex;
+    }
+
+    &__content {
+        @media (min-width: $mobile) {
+            flex: 0 0 100%;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                width: percent(1000, 1440);
+                height: 100%;
+                top: 0;
+                left: 0;
+                background-color: $c04;
+            }
+        }
+        @media (max-width: $mobile) {
+            background-color: $c04;
+        }
+    }
+
+    &__container {
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 2;
+        @include adaptiveValue("padding-top", 144, 40, 1440, 479.98, 1);
+        @include adaptiveValue("padding-bottom", 180, 40, 1440, 479.98, 1);
+        @media (min-width: $mobile) {
+            @include adaptiveValue("padding-right", 128, 20, 1170, 767.98, 1);
+            width: 50%;
+        }
+    }
+
+    &__label {
+        @extend %label_sm;
+        color: $c01;
+        @include adaptiveValue("margin-bottom", 18, 10);
+    }
+
+    &__title {
+        color: $c08;
+        @extend %h3;
+        @include adaptiveValue("margin-bottom", 18, 10);
+    }
+
+    &__subtitle {
+        @extend %text_rg;
+        color: $c08;
+        font-weight: 700;
+        @include adaptiveValue("margin-bottom", 72, 36);
+    }
+
+    &__text {
+        @extend %text_rg;
+        color: $c08;
+        @include adaptiveValue("margin-bottom", 48, 24);
+        p {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 36, 18);
+            }
+        }
+    }
+
+    &__btn {
+        min-height: rem(45);
+        font-size: rem(14);
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+
+    &__apps {
+        @media (min-width: $mobile) {
+            flex: 0 0 100%;
+            min-width: 0;
+            transform: translate(-100%, 0px);
+        }
+    }
+
+    &__slider {
+        @media (min-width: $mobile) {
+            position: relative;
+            width: 50%;
+            margin-left: auto;
+            display: flex;
+            flex-wrap: wrap;
+            &::after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: calc(100% - rem(72));
+                left: 0;
+                background-color: $c05;
+                z-index: 1;
+            }
+        }
+    }
+
+    &__swiper-wrap {
+        position: relative;
+        flex: 0 0 percent(460, 705);
+        min-width: 0;
+        @media (max-width: $tablet) {
+            flex: 1 1 100%;
+        }
+        @media (min-width: $mobile) {
+            @include adaptiveValue("margin-top", 200, 100, 1170, 767.98, 1);
+        }
+    }
+
+    &__swiper {
+    }
+
+    &__slide {
+        flex: 1 1 100%;
+    }
+
+    &__image-ibg {
+        position: relative;
+        z-index: 2;
+        @include adaptiveValue("height", 612, 250);
+    }
+
+    &__navigation {
+        flex: 0 0 percent(460, 705);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        @include adaptiveValue("padding-top", 40, 15, 1170, 767.98, 1);
+        position: relative;
+        z-index: 2;
+        @media (max-width: $tablet) {
+            flex: 1 1 100%;
+            justify-content: center;
+        }
+        @media (max-width: $mobile) {
+            padding: rem(15);
+            background-color: $c05;
+        }
+        @media (max-width: $mobile) {
+            justify-content: flex-start;
+        }
+    }
+
+    &__side {
+        color: $c02;
+        @extend %label_sm;
+        letter-spacing: rem(6);
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: rotate(90deg);
+        top: 50%;
+        @include adaptiveValue("right", -150, -40, 1440, 991.98, 1);
+        @media (max-width: $tablet) {
+            right: rem(15);
+            top: rem(-40);
+            transform: rotate(0deg);
+        }
+        @media (max-width: $mobile) {
+            display: block;
+            position: relative;
+            top: 0;
+            right: 0;
+            color: $c08;
+            flex: 1 1 auto;
+            text-align: right;
+            margin-left: rem(10);
+        }
+    }
+}
+
+.navigation {
+    &__pagging {
+        @extend %label_sm;
+        color: $c08;
+        letter-spacing: rem(6);
+        @include adaptiveValue("margin-right", 26, 10);
+        @media (max-width: $mobileSmall) {
+            letter-spacing: rem(2);
+            .line {
+                letter-spacing: rem(-1);
+            }
+        }
+    }
+
+    &__arrows {
+    }
+
+    &__arrow {
+        flex: 0 0 rem(27);
+        width: rem(27);
+        height: rem(27);
+        border-radius: 50%;
+        background-color: rgba(196, 196, 196, 0.05);
+        border: rem(1) solid rgba(255, 255, 255, 0.5);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        color: $c08;
+        font-size: rem(8);
+        transition: background-color 0.3s ease 0s, color 0.3s ease 0s, border 0.3s ease 0s;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-right", 18, 10, 479.98, 320, 1);
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: rgba(196, 196, 196, 0.1);
+                border: rem(1) solid $c08;
+                color: $c01;
+            }
+        }
+        &_prev {
+            &::before {
+                transform: rotate(-180deg);
+            }
+        }
+
+        &_next {
         }
     }
 }

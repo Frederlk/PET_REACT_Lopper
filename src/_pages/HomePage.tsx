@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Benefits from "../_containers/HomePage/Benefits";
 import Intro from "../_containers/HomePage/Intro";
 import Mainscreen from "../_containers/HomePage/Mainscreen";
 
@@ -9,75 +10,7 @@ const HomePage: FC = () => {
 
             <Intro />
 
-            <section className="page__benefits benefits">
-                <div className="benefits__wrapper">
-                    <div className="benefits__content">
-                        <div className="benefits__container _container">
-                            <div className="benefits__inner">
-                                <div className="benefits__label">Benefits</div>
-                                <h2 className="benefits__title">Shaping the future</h2>
-                                <div className="benefits__subtitle">
-                                    Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut eu
-                                    sem integer vitae. Libero nunc consequat interdum varius.
-                                </div>
-                                <div className="benefits__text">
-                                    <p>
-                                        Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.
-                                    </p>
-                                    <p>Lectus vestibulum mattis ullamcorper velit sed ullamcorper.</p>
-                                    <p>
-                                        Diam phasellus vestibulum lorem sed risus ultricies tristique nulla.
-                                        Dui faucibus in ornare quam viverra.
-                                    </p>
-                                    <p>Posuere ac ut consequat semper viverra.</p>
-                                </div>
-                                <a href="" className="benefits__btn btn btn_rg">
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="benefits__apps">
-                        <div className="benefits__slider">
-                            <div className="benefits__swiper-wrap">
-                                <div className="benefits__swiper _swiper">
-                                    <div className="benefits__slide">
-                                        <div className="benefits__image _ibg">
-                                            <img src="img/content/03.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div className="benefits__slide">
-                                        <div className="benefits__image _ibg">
-                                            <img src="img/content/04.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                    <div className="benefits__slide">
-                                        <div className="benefits__image _ibg">
-                                            <img src="img/content/05.jpg" alt="" />
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="benefits__side" data-da=".benefits__navigation,767.98,last">
-                                    Mobile Apps
-                                </div>
-                            </div>
-                            <div className="benefits__navigation navigation">
-                                <div className="navigation__pagging"></div>
-                                <div className="navigation__arrows">
-                                    <button
-                                        type="button"
-                                        className="navigation__arrow navigation__arrow_prev _icon-arrow"
-                                    ></button>
-                                    <button
-                                        type="button"
-                                        className="navigation__arrow navigation__arrow_next _icon-arrow"
-                                    ></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Benefits />
 
             <section className="page__amazing amazing">
                 <div className="amazing__wrapper">

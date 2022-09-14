@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Link } from "react-router-dom";
 import { images } from "../../constants";
 import { RouteNames } from "../../routes";
@@ -50,4 +50,4 @@ const Intro: FC = () => {
     );
 };
 
-export default Intro;
+export default memo(Intro);

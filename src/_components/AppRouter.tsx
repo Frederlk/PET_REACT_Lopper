@@ -4,8 +4,7 @@ import { _closeAllSpollers } from "../helpers/functions";
 import { routesConfig } from "../routes";
 import useMenu from "../store/slices/menu/useMenu";
 
-const AppRouter: FC = () => {
-    const routes = useRoutes(routesConfig);
+const PageChange: FC = () => {
     const { pathname } = useLocation();
     const { onCloseMenu } = useMenu();
 
@@ -13,6 +12,7 @@ const AppRouter: FC = () => {
         window.scrollTo(0, 0);
         onCloseMenu();
         _closeAllSpollers();
+
         const wrapper = document.querySelector(".wrapper");
         if (wrapper && pathname === "/") {
             wrapper?.classList.add("home-wrapper");
@@ -20,8 +20,18 @@ const AppRouter: FC = () => {
             wrapper?.classList.remove("home-wrapper");
         }
     }, [pathname]);
+    return null;
+};
 
-    return <>{routes}</>;
+const AppRouter: FC = () => {
+    const routes = useRoutes(routesConfig);
+
+    return (
+        <>
+            <PageChange />
+            {routes}
+        </>
+    );
 };
 
 export default AppRouter;

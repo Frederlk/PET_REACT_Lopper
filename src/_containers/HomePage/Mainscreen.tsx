@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, memo } from "react";
 import { Link } from "react-router-dom";
 import { RouteNames } from "../../routes";
 import { Picture } from "../../_components";
@@ -9,7 +9,7 @@ const Mainscreen: FC = () => {
     const { bgMain_WEBP, bgMain } = images.defaultImages;
 
     return (
-        <section className="page__mainscreen mainscreen">
+        <section className="mainscreen">
             <div className="mainscreen__container ">
                 <div className="mainscreen__flex">
                     <div className="mainscreen__content">
@@ -47,4 +47,4 @@ const Mainscreen: FC = () => {
     );
 };
 
-export default Mainscreen;
+export default memo(Mainscreen);

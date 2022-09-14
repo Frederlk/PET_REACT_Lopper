@@ -176,7 +176,7 @@ body {
 // .page {
 //     flex: 1 1 auto;
 //     @media (min-width: em(600.98)) {
-//         @include adaptiv-value("padding-top", 144, 55, 1);
+//         @include adaptiveValue("padding-top", 144, 55);
 //     }
 //     padding-top: 55px;
 //     &_home {
@@ -246,253 +246,18 @@ body {
 
 // //========================================================================================================================================================
 
-// .benefits {
-//     &__wrapper {
-//         overflow: hidden;
-//         @media (min-width: $mobile) {
-//             display: flex;
-//         }
-//     }
-
-//     &__content {
-//         @media (min-width: $mobile) {
-//             flex: 0 0 100%;
-//             position: relative;
-//             &::before {
-//                 content: "";
-//                 position: absolute;
-//                 width: 1000 / 1440 * 100%;
-//                 height: 100%;
-//                 top: 0;
-//                 left: 0;
-//                 background-color: $c04;
-//             }
-//         }
-//         @media (max-width: $mobile) {
-//             background-color: $c04;
-//         }
-//     }
-
-//     &__container {
-//     }
-
-//     &__inner {
-//         position: relative;
-//         z-index: 2;
-//         @media (min-width: $md1+px) {
-//             @include adaptiv-value("padding-right", 128, 20, 1);
-//             @include adaptiv-value("padding-top", 144, 60, 1);
-//             @include adaptiv-value("padding-bottom", 180, 40, 1);
-//         }
-//         @media (max-width: $md1+px) {
-//             @include adaptiv-value("padding-top", 100, 40, 1);
-//             @include adaptiv-value("padding-bottom", 100, 40, 1);
-//         }
-//         @media (min-width: $mobile) {
-//             @include adaptiv-value("padding-right", 60, 20, 1);
-//             width: 50%;
-//         }
-//     }
-
-//     &__label {
-//         @extend %label_sm;
-//         color: $c01;
-//         @include adaptiv-value("margin-bottom", 18, 10, 1);
-//     }
-
-//     &__title {
-//         color: $c08;
-//         @extend %h3;
-//         @include adaptiv-value("margin-bottom", 18, 10, 1);
-//     }
-
-//     &__subtitle {
-//         @extend %text_rg;
-//         color: $c08;
-//         font-weight: 700;
-//         @include adaptiv-value("margin-bottom", 72, 36, 1);
-//     }
-
-//     &__text {
-//         @extend %text_rg;
-//         color: $c08;
-//         @include adaptiv-value("margin-bottom", 48, 24, 1);
-//         p {
-//             &:not(:last-child) {
-//                 @include adaptiv-value("margin-bottom", 36, 18, 1);
-//             }
-//         }
-//     }
-
-//     &__btn {
-//         min-height: 45px;
-//         font-size: 13.5px;
-//         @media (max-width: $mobileSmall) {
-//             width: 100%;
-//         }
-//     }
-
-//     &__apps {
-//         @media (min-width: $mobile) {
-//             flex: 0 0 100%;
-//             min-width: 0;
-//             transform: translate(-100%, 0px);
-//         }
-//     }
-
-//     &__slider {
-//         @media (min-width: $mobile) {
-//             position: relative;
-//             width: 50%;
-//             margin: 0 0 0 auto;
-//             display: flex;
-//             flex-wrap: wrap;
-//             &::after {
-//                 content: "";
-//                 position: absolute;
-//                 width: 100%;
-//                 height: 100%;
-//                 top: calc(100% - 72px);
-//                 left: 0;
-//                 background-color: $c05;
-//                 z-index: 1;
-//             }
-//         }
-//     }
-
-//     &__swiper-wrap {
-//         position: relative;
-//         @media (max-width: $tablet) {
-//             flex: 1 1 100%;
-//         }
-//         @media (min-width: $mobile) {
-//             flex: 0 0 460 / 705 * 100%;
-//             min-width: 0;
-//             @include adaptiv-value("margin-top", 200, 0, 1);
-//         }
-//     }
-
-//     &__swiper {
-//     }
-
-//     &__slide {
-//         flex: 1 1 100%;
-//     }
-
-//     &__image {
-//         position: relative;
-//         z-index: 2;
-//         @include adaptiv-value("height", 612, 400, 1);
-//         @media (max-width: $mobile) {
-//             @include adaptiv-value("height", 450, 250, 1);
-//         }
-//     }
-
-//     &__navigation {
-//         flex: 0 0 460 / 705 * 100%;
-//         display: flex;
-//         align-items: center;
-//         justify-content: flex-end;
-//         @include adaptiv-value("padding-top", 40, 18, 1);
-//         position: relative;
-//         z-index: 2;
-//         @media (max-width: $tablet) {
-//             flex: 1 1 100%;
-//             justify-content: center;
-//         }
-//         @media (max-width: $mobile) {
-//             padding-right: 15px;
-//             padding-left: 15px;
-//             background-color: $c05;
-//         }
-//         @media (max-width: $mobile) {
-//             justify-content: flex-start;
-//         }
-//     }
-
-//     &__side {
-//         color: $c02;
-//         @extend %label_sm;
-//         letter-spacing: 6px;
-//         @media (min-width: $tablet) {
-//             transform: rotate(90deg);
-//             top: 50%;
-//             @include adaptiv-value("right", -150, -100, 1);
-//         }
-//         @media (min-width: $mobile) {
-//             position: absolute;
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             right: 15px;
-//             top: -40px;
-//         }
-//         @media (max-width: $mobile) {
-//             color: $c08;
-//             flex: 1 1 auto;
-//             text-align: right;
-//             margin-left: 10px;
-//         }
-//     }
-// }
-// .navigation {
-//     &__pagging {
-//         @extend %label_sm;
-//         letter-spacing: 6px;
-//         color: $c08;
-//         margin-top: 2px;
-//         @include adaptiv-value("margin-right", 26, 10, 1);
-//     }
-
-//     &__arrows {
-//     }
-
-//     &__arrow {
-//         flex: 0 0 27px;
-//         width: 27px;
-//         height: 27px;
-//         border-radius: 50%;
-//         background-color: rgba(196, 196, 196, 0.05);
-//         border: 1px solid rgba(255, 255, 255, 0.5);
-//         display: inline-flex;
-//         justify-content: center;
-//         align-items: center;
-//         color: $c08;
-//         font-size: 8px;
-//         transition: all 0.3s ease 0s;
-//         &:not(:last-child) {
-//             @include adaptiv-value("margin-right", 18, 10, 1);
-//         }
-//         @media (any-hover: hover) {
-//             &:hover {
-//                 background-color: rgba(196, 196, 196, 0.1);
-//                 border: 1px solid $c08;
-//                 color: $c01;
-//             }
-//         }
-//         &_prev {
-//             &::before {
-//                 transform: rotate(-180deg);
-//             }
-//         }
-
-//         &_next {
-//         }
-//     }
-// }
 // //========================================================================================================================================================
 // .amazing {
 //     &_services {
 //         .amazing__wrapper {
-//             @include adaptiv-value("padding-top", 262, 128, 1);
-//             @include adaptiv-value("padding-bottom", 128, 40, 1);
+//             @include adaptiveValue("padding-top", 262, 128);
+//             @include adaptiveValue("padding-bottom", 128, 40);
 //         }
 //     }
 //     &__wrapper {
 //         background-color: $c05;
-//         @include adaptiv-value("padding-top", 128, 60, 1);
-//         @include adaptiv-value("padding-bottom", 260, 100, 1);
+//         @include adaptiveValue("padding-top", 128, 60);
+//         @include adaptiveValue("padding-bottom", 260, 100);
 //     }
 
 //     &__container {
@@ -503,20 +268,20 @@ body {
 
 //     &__top {
 //         position: relative;
-//         @include adaptiv-value("margin-bottom", 72, 48, 1);
+//         @include adaptiveValue("margin-bottom", 72, 48);
 //         text-align: center;
 //     }
 
 //     &__label {
 //         color: $c01;
 //         @extend %label_sm;
-//         @include adaptiv-value("margin-bottom", 18, 10, 1);
+//         @include adaptiveValue("margin-bottom", 18, 10);
 //     }
 
 //     &__title {
 //         color: $c08;
 //         @extend %h3;
-//         @include adaptiv-value("margin-bottom", 24, 12, 1);
+//         @include adaptiveValue("margin-bottom", 24, 12);
 //     }
 
 //     &__subtitle {
@@ -533,7 +298,7 @@ body {
 //         position: absolute;
 //         width: 100%;
 //         height: 100%;
-//         @include adaptiv-value("top", -120, -20, 1);
+//         @include adaptiveValue("top", -120, -20);
 //         left: 0;
 //         pointer-events: none;
 //         img {
@@ -545,10 +310,10 @@ body {
 //         display: flex;
 //         flex-wrap: wrap;
 //         margin-bottom: 18px;
-//         @media (min-width: $md1+px) {
+//         @media (min-width: $pc) {
 //             margin: 0px -38px;
 //         }
-//         @media (max-width: $md1+px) {
+//         @media (max-width: $pc) {
 //             margin-right: -18px;
 //             margin-left: -18px;
 //         }
@@ -556,11 +321,11 @@ body {
 
 //     &__column {
 //         flex: 0 1 33.333%;
-//         @include adaptiv-value("margin-bottom", 56, 24, 1);
-//         @media (min-width: $md1+px) {
+//         @include adaptiveValue("margin-bottom", 56, 24);
+//         @media (min-width: $pc) {
 //             padding: 0px 38px;
 //         }
-//         @media (max-width: $md1+px) {
+//         @media (max-width: $pc) {
 //             padding-left: 18px;
 //             padding-right: 18px;
 //         }
@@ -602,7 +367,7 @@ body {
 //         display: inline-flex;
 //         justify-content: center;
 //         align-items: center;
-//         @include adaptiv-value("margin-bottom", 24, 12, 1);
+//         @include adaptiveValue("margin-bottom", 24, 12);
 //         @media (any-hover: hover) {
 //             &:hover {
 //                 background-color: rgba(196, 196, 196, 0.1);
@@ -652,7 +417,7 @@ body {
 //     }
 //     &__link {
 //         @extend %h6;
-//         @include adaptiv-value("margin-bottom", 32, 18, 1);
+//         @include adaptiveValue("margin-bottom", 32, 18);
 //     }
 
 //     &__text {
@@ -667,12 +432,12 @@ body {
 // .testi {
 //     &_gallery {
 //         .testi__wrapper {
-//             @include adaptiv-value("margin-top", 348, 100, 1);
+//             @include adaptiveValue("margin-top", 348, 100);
 //             &::before {
 //                 content: "";
 //                 background-color: $c09;
 //                 width: 100%;
-//                 @include adaptiv-value("height", 348, 100, 1);
+//                 @include adaptiveValue("height", 348, 100);
 //                 left: 0;
 //                 bottom: 100%;
 //                 position: absolute;
@@ -682,7 +447,7 @@ body {
 //     &__wrapper {
 //         position: relative;
 //         background-color: $c09;
-//         @include adaptiv-value("padding-bottom", 136, 40, 1);
+//         @include adaptiveValue("padding-bottom", 136, 40);
 //     }
 
 //     &__content {
@@ -719,29 +484,29 @@ body {
 //     }
 
 //     &__image {
-//         @include adaptiv-value("width", 460, 150, 1);
-//         @include adaptiv-value("height", 460, 150, 1);
+//         @include adaptiveValue("width", 460, 150);
+//         @include adaptiveValue("height", 460, 150);
 //         border-radius: 50%;
 //         overflow: hidden;
-//         @include adaptiv-value("margin-top", -126, -40, 1);
+//         @include adaptiveValue("margin-top", -126, -40);
 //         position: relative;
 //         z-index: 1;
 //     }
 
 //     &__quotes {
-//         @include adaptiv-value("margin-top", -30, -18, 1);
+//         @include adaptiveValue("margin-top", -30, -18);
 //         position: relative;
 //         z-index: 2;
-//         @include adaptiv-value("margin-bottom", 72, 36, 1);
+//         @include adaptiveValue("margin-bottom", 72, 36);
 //         svg {
-//             @include adaptiv-value("width", 93, 40, 1);
-//             @include adaptiv-value("height", 81, 30, 1);
+//             @include adaptiveValue("width", 93, 40);
+//             @include adaptiveValue("height", 81, 30);
 //         }
 //     }
 
 //     &__text {
 //         @extend %quote_lg;
-//         @include adaptiv-value("margin-bottom", 32, 18, 1);
+//         @include adaptiveValue("margin-bottom", 32, 18);
 //         @media (min-width: $mobileSmall) {
 //             max-width: 755px;
 //             @media (max-width: $tablet) {
@@ -768,11 +533,11 @@ body {
 //             position: absolute;
 //             width: 100%;
 //             left: 0;
-//             @include adaptiv-value("top", 500, 250, 1);
+//             @include adaptiveValue("top", 500, 250);
 //             justify-content: space-between;
 //         }
 //         @media (max-width: $mobileSmall) {
-//             @include adaptiv-value("margin-top", 30, 24, 1);
+//             @include adaptiveValue("margin-top", 30, 24);
 //         }
 //     }
 
@@ -790,7 +555,7 @@ body {
 //         color: $c01;
 //         font-size: 11px;
 //         &:not(:last-child) {
-//             @include adaptiv-value("margin-right", 36, 24, 1);
+//             @include adaptiveValue("margin-right", 36, 24);
 //         }
 //         @media (any-hover: hover) {
 //             &:hover {
@@ -853,20 +618,20 @@ body {
 //         }
 
 //         &_1 {
-//             @include adaptiv-value("top", 314, 100, 1);
+//             @include adaptiveValue("top", 314, 100);
 //             left: 108 / 1440 * 100%;
-//             @include adaptiv-value("width", 77, 47, 1);
-//             @include adaptiv-value("height", 77, 47, 1);
+//             @include adaptiveValue("width", 77, 47);
+//             @include adaptiveValue("height", 77, 47);
 //             @media (max-width: $mobileSmall) {
 //                 left: 170 / 1440 * 100%;
 //             }
 //         }
 //         &_2 {
-//             @include adaptiv-value("top", 105, 20, 1);
+//             @include adaptiveValue("top", 105, 20);
 //             left: 245 / 1440 * 100%;
-//             @include adaptiv-value("width", 105, 50, 1);
-//             @include adaptiv-value("height", 105, 50, 1);
-//             @media (max-width: $md1+px) {
+//             @include adaptiveValue("width", 105, 50);
+//             @include adaptiveValue("height", 105, 50);
+//             @media (max-width: $pc) {
 //                 left: 150 / 1440 * 100%;
 //             }
 //             @media (max-width: $mobile) {
@@ -877,11 +642,11 @@ body {
 //             }
 //         }
 //         &_3 {
-//             @include adaptiv-value("top", 240, 100, 1);
+//             @include adaptiveValue("top", 240, 100);
 //             left: 413 / 1440 * 100%;
-//             @include adaptiv-value("width", 64, 34, 1);
-//             @include adaptiv-value("height", 64, 34, 1);
-//             @media (max-width: $md1+px) {
+//             @include adaptiveValue("width", 64, 34);
+//             @include adaptiveValue("height", 64, 34);
+//             @media (max-width: $pc) {
 //                 left: 300 / 1440 * 100%;
 //             }
 //             @media (max-width: $mobileSmall) {
@@ -889,19 +654,19 @@ body {
 //             }
 //         }
 //         &_4 {
-//             @include adaptiv-value("top", 235, 110, 1);
+//             @include adaptiveValue("top", 235, 110);
 //             right: 355 / 1440 * 100%;
-//             @include adaptiv-value("width", 81, 40, 1);
-//             @include adaptiv-value("height", 81, 40, 1);
+//             @include adaptiveValue("width", 81, 40);
+//             @include adaptiveValue("height", 81, 40);
 //             @media (max-width: $mobileSmall) {
 //                 right: 305 / 1440 * 100%;
 //             }
 //         }
 //         &_5 {
-//             @include adaptiv-value("top", 135, 60, 1);
+//             @include adaptiveValue("top", 135, 60);
 //             right: 245 / 1440 * 100%;
-//             @include adaptiv-value("width", 56, 30, 1);
-//             @include adaptiv-value("height", 56, 30, 1);
+//             @include adaptiveValue("width", 56, 30);
+//             @include adaptiveValue("height", 56, 30);
 //             @media (max-width: $mobile) {
 //                 display: none;
 //             }
@@ -909,14 +674,14 @@ body {
 //         &_6 {
 //             top: 42px;
 //             right: 64 / 1440 * 100%;
-//             @include adaptiv-value("width", 92, 52, 1);
-//             @include adaptiv-value("height", 92, 52, 1);
+//             @include adaptiveValue("width", 92, 52);
+//             @include adaptiveValue("height", 92, 52);
 //         }
 //         &_7 {
-//             @include adaptiv-value("top", 265, 140, 1);
+//             @include adaptiveValue("top", 265, 140);
 //             right: 74 / 1440 * 100%;
-//             @include adaptiv-value("width", 73, 43, 1);
-//             @include adaptiv-value("height", 73, 43, 1);
+//             @include adaptiveValue("width", 73, 43);
+//             @include adaptiveValue("height", 73, 43);
 //             @media (max-width: 400px) {
 //                 display: none;
 //             }
@@ -928,8 +693,8 @@ body {
 
 // .newsletter {
 //     &__wrapper {
-//         @include adaptiv-value("padding-top", 128, 40, 1);
-//         @include adaptiv-value("padding-bottom", 140, 40, 1);
+//         @include adaptiveValue("padding-top", 128, 40);
+//         @include adaptiveValue("padding-bottom", 140, 40);
 //     }
 
 //     &__container {
@@ -945,11 +710,11 @@ body {
 
 //     &__title {
 //         @extend %h3;
-//         @include adaptiv-value("margin-bottom", 24, 12, 1);
+//         @include adaptiveValue("margin-bottom", 24, 12);
 //     }
 
 //     &__text {
-//         @include adaptiv-value("margin-bottom", 64, 32, 1);
+//         @include adaptiveValue("margin-bottom", 64, 32);
 //         @extend %h6;
 //         color: $c_maintext;
 //     }
