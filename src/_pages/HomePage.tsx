@@ -1,7 +1,5 @@
 import { FC } from "react";
-import Benefits from "../_containers/HomePage/Benefits";
-import Intro from "../_containers/HomePage/Intro";
-import Mainscreen from "../_containers/HomePage/Mainscreen";
+import { Amazing, Benefits, Intro, Mainscreen } from "../_containers";
 
 const HomePage: FC = () => {
     return (
@@ -12,128 +10,7 @@ const HomePage: FC = () => {
 
             <Benefits />
 
-            <section className="page__amazing amazing">
-                <div className="amazing__wrapper">
-                    <div className="amazing__container _container">
-                        <div className="amazing__inner">
-                            <div className="amazing__top">
-                                <div className="amazing__label">We are Amazing</div>
-                                <h2 className="amazing__title">Our services</h2>
-                                <div className="amazing__subtitle">
-                                    Quam adipiscing vitae proin sagittis nisl rhoncus mattis rhoncus urna.
-                                    Quam elementum pulvinar etiam non. Eu consequat.
-                                </div>
-                            </div>
-                            <div className="amazing__flex">
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-axe _c1"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c1">
-                                                    Webdesign
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Tincidunt lobortis feugiat vivamus at augue eget. Risus
-                                                feugiat in ante metus dictum. Amet aliquam id diam maecenas.
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-nuclear _c2"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c2">
-                                                    Webdev
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Eget nulla facilisi etiam dignissim diam quis enim lobortis
-                                                scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel
-                                                pretium.
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-fort _c3"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c3">
-                                                    Marketing
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Eu augue ut lectus arcu bibendum at. Pellentesque nec nam
-                                                aliquam sem et tortor consequat.{" "}
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-scales _c3"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c3">
-                                                    Marketing
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Id venenatis a condimentum vitae. Magna fermentum iaculis eu
-                                                non diam phasellus vestibulum lorem. Tortor dignissim
-                                                convallis aenean et.
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-skittles _c1"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c1">
-                                                    Webdesign
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Sollicitudin ac orci phasellus egestas tellus rutrum tellus
-                                                pellentesque. Malesuada fames ac turpis egestas sed.
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                                <div className="amazing__column">
-                                    <article className="amazing__item item-amazing">
-                                        <a href="#" className="item-amazing__icon _icon-brain _c2"></a>
-                                        <div className="item-amazing__body">
-                                            <h6 className="item-amazing__link">
-                                                <a href="#" className="_c2">
-                                                    Webdev
-                                                </a>
-                                            </h6>
-                                            <div className="item-amazing__text">
-                                                Integer quis auctor elit sed vulputate mi. Semper auctor neque
-                                                vitae tempus. Vulputate odio ut enim blandit volutpat maecenas
-                                                volutpat.
-                                            </div>
-                                        </div>
-                                    </article>
-                                </div>
-                            </div>
-                            <div className="amazing__btn-wrap">
-                                <a href="#" className="amazing__btn btn btn_rg">
-                                    Learn more
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Amazing />
 
             <section className="page__testi testi">
                 <div className="testi__wrapper">

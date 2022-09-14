@@ -1,9 +1,10 @@
 import { FC, memo } from "react";
 import { Link } from "react-router-dom";
-import { RouteNames } from "../../routes";
-import { Picture } from "../../_components";
-import { images } from "../../constants";
 import { Link as LinkGoto } from "react-scroll";
+
+import { RouteNames } from "../../routes";
+import { images } from "../../constants";
+import { Picture } from "../../_components";
 
 const Mainscreen: FC = () => {
     const { bgMain_WEBP, bgMain } = images.defaultImages;

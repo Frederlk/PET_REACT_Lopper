@@ -2,6 +2,8 @@ import bgMain from "../assets/img/content/01.jpg";
 import bgMain_WEBP from "../assets/img/content/01.webp";
 import intro from "../assets/img/content/02.jpg";
 import intro_WEBP from "../assets/img/content/02.webp";
+import map01 from "../assets/img/map.svg";
+import map01_WEBP from "../assets/img/map.webp";
 
 import benefits01 from "../assets/img/content/03.jpg";
 import benefits01_WEBP from "../assets/img/content/03.webp";
@@ -15,6 +17,8 @@ const defaultImages = {
     bgMain_WEBP,
     intro,
     intro_WEBP,
+    map01,
+    map01_WEBP,
 };
 
 const benefitsImages = {

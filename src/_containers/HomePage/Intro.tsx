@@ -1,8 +1,9 @@
 import { FC, memo } from "react";
 import { Link } from "react-router-dom";
+
 import { images } from "../../constants";
 import { RouteNames } from "../../routes";
-import { Picture } from "../../_components";
+import { Picture, Top } from "../../_components";
 
 const Intro: FC = () => {
     const { intro, intro_WEBP } = images.defaultImages;
@@ -12,12 +13,12 @@ const Intro: FC = () => {
             <div className="intro__content">
                 <div className="intro__container ">
                     <div className="intro__inner">
-                        <h3 className="intro__label">Intro</h3>
-                        <h2 className="intro__title">Our future</h2>
-                        <p className="intro__subtitle">
-                            Apparently we had reached a great height in the atmosphere, for the sky was a dead
-                            black, and the stars had ceased to twinkle.
-                        </p>
+                        <Top className="intro__top" label="Intro" title="Our future">
+                            <p className="intro__subtitle">
+                                Apparently we had reached a great height in the atmosphere, for the sky was a
+                                dead black, and the stars had ceased to twinkle.
+                            </p>
+                        </Top>
                         <p className="intro__text">
                             By the same illusion which lifts the horizon of the sea to the level of the
                             spectator on a hillside, the sable cloud beneath was dished out, and the car

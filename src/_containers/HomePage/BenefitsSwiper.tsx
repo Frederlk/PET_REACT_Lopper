@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 import { Pagination, Autoplay, Lazy, Navigation } from "swiper";
 
 import { data } from "../../constants";
-import { Picture } from "../../_components";
 import dynamicAdaptive from "../../helpers/dynamic_adapt";
+import { Picture } from "../../_components";
 
 const swiperProps: SwiperProps = {
     pagination: {

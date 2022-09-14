@@ -118,8 +118,8 @@
     color: $c_warning;
 }
 a._c1,
-._c2,
-._c3 {
+a._c2,
+a._c3 {
     transition: color 0.3s ease 0s;
     &:hover {
         color: $c08;
@@ -129,25 +129,27 @@ a._c1,
 //========================================================================================================================================================
 
 .top {
-    text-align: center;
-    @media (min-width: $mobile) {
-        max-width: rem(566);
-        margin: 0 auto;
-    }
     &__label {
         @extend %label_sm;
         color: $c01;
-        @include adaptiveValue("margin-bottom", 12, 8);
+        @include adaptiveValue("margin-bottom", 18, 10);
     }
 
     &__title {
         @extend %h3;
-        @include adaptiveValue("margin-bottom", 24, 18);
+        @include adaptiveValue("margin-bottom", 18, 10);
+        .dark & {
+            color: $c08;
+        }
     }
 
     &__subtitle {
         @extend %text_rg;
         font-weight: 700;
+        @include adaptiveValue("margin-bottom", 36, 18);
+        .dark & {
+            color: $c08;
+        }
     }
 }
 

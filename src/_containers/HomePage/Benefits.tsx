@@ -2,7 +2,8 @@ import { FC, memo } from "react";
 import { Link } from "react-router-dom";
 
 import { RouteNames } from "../../routes";
-import BenefitsSwiper from "./BenefitsSwiper";
+import { Top } from "../../_components";
+import { BenefitsSwiper } from "..";
 
 const Benefits: FC = () => {
     return (
@@ -10,12 +11,12 @@ const Benefits: FC = () => {
             <div className="benefits__content">
                 <div className="benefits__container">
                     <div className="benefits__inner">
-                        <h3 className="benefits__label">Benefits</h3>
-                        <h2 className="benefits__title">Shaping the future</h2>
-                        <p className="benefits__subtitle">
-                            Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut eu sem
-                            integer vitae. Libero nunc consequat interdum varius.
-                        </p>
+                        <Top className="benefits__top dark" label="Benefits" title="Shaping the future">
+                            <p className="benefits__subtitle top__subtitle">
+                                Eget nunc scelerisque viverra mauris in aliquam. Dignissim sodales ut eu sem
+                                integer vitae. Libero nunc consequat interdum varius.
+                            </p>
+                        </Top>
                         <div className="benefits__text">
                             <p>Magna sit amet purus gravida. Sit amet porttitor eget dolor morbi non.</p>
                             <p>Lectus vestibulum mattis ullamcorper velit sed ullamcorper.</p>

@@ -264,20 +264,7 @@
         }
     }
 
-    &__label {
-        @extend %label_sm;
-        color: $c01;
-        @include adaptiveValue("margin-bottom", 18, 10);
-    }
-
-    &__title {
-        @extend %h3;
-        @include adaptiveValue("margin-bottom", 18, 10);
-    }
-
     &__subtitle {
-        @extend %text_rg;
-        font-weight: 700;
         @include adaptiveValue("margin-bottom", 36, 18);
     }
 
@@ -478,22 +465,7 @@
         }
     }
 
-    &__label {
-        @extend %label_sm;
-        color: $c01;
-        @include adaptiveValue("margin-bottom", 18, 10);
-    }
-
-    &__title {
-        color: $c08;
-        @extend %h3;
-        @include adaptiveValue("margin-bottom", 18, 10);
-    }
-
     &__subtitle {
-        @extend %text_rg;
-        color: $c08;
-        font-weight: 700;
         @include adaptiveValue("margin-bottom", 72, 36);
     }
 
@@ -668,6 +640,143 @@
 
         &_next {
         }
+    }
+}
+
+//========================================================================================================================================================
+
+.amazing {
+    background-color: $c05;
+    @include adaptiveValue("padding-top", 128, 60);
+    @include adaptiveValue("padding-bottom", 260, 100);
+    &_services {
+        .amazing__wrapper {
+            @include adaptiveValue("padding-top", 262, 128);
+            @include adaptiveValue("padding-bottom", 128, 40);
+        }
+    }
+
+    &__container {
+    }
+
+    &__top {
+        position: relative;
+        @include adaptiveValue("margin-bottom", 72, 48);
+        text-align: center;
+    }
+
+    &__subtitle {
+        font-weight: 800;
+        @media (min-width: $mobile) {
+            max-width: rem(560);
+            margin: 0 auto;
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        @include adaptiveValue("top", -120, -20);
+        left: 0;
+        pointer-events: none;
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__flex {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("column-gap", 75, 30, 1170, 479.98, 1);
+        @include adaptiveValue("row-gap", 55, 30, 1170, 479.98, 1);
+        @include adaptiveValue("margin-bottom", 75, 40, 1170, 479.98, 1);
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+    }
+
+    &__btn-wrap {
+        text-align: center;
+    }
+
+    &__btn {
+        min-height: rem(45);
+        font-size: rem(14);
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+    }
+}
+
+.item-amazing {
+    display: flex;
+    @media (min-width: $mobileSmall) {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    &__icon {
+        flex: 0 0 rem(72);
+        width: rem(72);
+        height: rem(22);
+        border-radius: 50%;
+        background-color: rgba(196, 196, 196, 0.02);
+        border: rem(1) solid rgba(255, 255, 255, 0.1);
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        @include adaptiveValue("margin-bottom", 24, 12);
+        &::before {
+            ._icon-nuclear &,
+            ._icon-skittles & {
+                font-size: rem(30);
+            }
+            ._icon-axe &,
+            ._icon-scales & {
+                font-size: rem(20);
+            }
+            ._icon-brain & {
+                font-size: rem(25);
+            }
+            ._icon-fort & {
+                font-size: rem(34);
+            }
+        }
+        @media (max-width: $mobileSmall) {
+            flex: 0 0 rem(56);
+            width: rem(56);
+            height: rem(56);
+            &::before {
+                font-size: rem(20) !important;
+            }
+        }
+    }
+    &__body {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        @media (max-width: $mobileSmall) {
+            padding-top: rem(10);
+            padding-left: rem(10);
+        }
+    }
+    &__link {
+        @extend %h6;
+        @include adaptiveValue("margin-bottom", 32, 18);
+    }
+
+    &__text {
+        @extend %text_sm;
+        color: $c08;
+        flex: 1 1 auto;
     }
 }
 

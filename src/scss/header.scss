@@ -24,37 +24,6 @@
             opacity: 1;
             visibility: visible;
         }
-        .header__logo-link {
-            color: $c08;
-        }
-        .header__phone-link {
-            color: $c08;
-            @media (any-hover: hover) {
-                &:hover {
-                    color: $c01;
-                }
-            }
-        }
-        .menu__container {
-            color: $c08;
-        }
-        .menu__body {
-            background-color: $c05;
-            &::before {
-                background-color: $c05;
-            }
-        }
-        .menu__link {
-            color: $c08;
-            &::after {
-                background: $c08;
-            }
-        }
-        .icon-menu {
-            span {
-                background-color: $c08;
-            }
-        }
     }
 
     &__container {
@@ -82,7 +51,8 @@
         line-height: math.div(43, 24);
         letter-spacing: rem(2);
         color: $c04;
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             color: $c08;
         }
     }
@@ -106,7 +76,8 @@
         @extend %misc_nav;
         transition: color 0.3s ease 0s;
         color: $c_headers;
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             color: $c08;
         }
         &::before {
@@ -160,7 +131,8 @@
             visibility: hidden;
             z-index: 11;
         }
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             background-color: $c05;
             &::before {
                 background-color: $c05;
@@ -181,7 +153,8 @@
         @include adaptiveValue("column-gap", 100, 50, 1170, 600.98, 1);
         @include adaptiveValue("margin-top", 100, 20, 1170, 600.98, 1);
         color: $c_headers;
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             color: $c08;
         }
         @media (max-width: em(600.98)) {
@@ -240,7 +213,8 @@
                 }
             }
         }
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             color: $c08;
             &::after {
                 background-color: $c08;
@@ -276,7 +250,8 @@
             height: rem(1);
             background-color: $c01;
         }
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             color: $c08;
         }
         @media (max-width: $mobileSmall) {
@@ -292,7 +267,8 @@
         margin-top: rem(20);
         .socials__link {
             color: $c_headers;
-            .home-wrapper & {
+            .home-wrapper &,
+            ._scroll & {
                 color: $c08;
             }
         }
@@ -323,7 +299,8 @@
         width: 100%;
         height: rem(2);
         background-color: $c_headers;
-        .home-wrapper & {
+        .home-wrapper &,
+        ._scroll & {
             background-color: $c08;
         }
     }
