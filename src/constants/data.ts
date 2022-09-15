@@ -1,13 +1,14 @@
 import {
-    IBenefitsSlides,
     IServiceItem,
     ISocialLinks,
     ITestimonialCircle,
     ITestimonialSlide,
+    IImages,
+    ISphere,
 } from "./../models/models";
 
 import images from "./images";
-const { benefitsImages, avatarsImages } = images;
+const { benefitsImages, avatarsImages, companiesImages } = images;
 
 //========================================================================================================================================================
 
@@ -35,7 +36,7 @@ const socialLinks: ISocialLinks[] = [
 ];
 //========================================================================================================================================================
 
-const benefitsSlides: IBenefitsSlides[] = [
+const benefitsSlides: IImages[] = [
     {
         img: benefitsImages.benefits01,
         imgWEBP: benefitsImages.benefits01_WEBP,
@@ -157,4 +158,67 @@ const testimonialsCircles: ITestimonialCircle[] = [
     },
 ];
 
-export default { socialLinks, benefitsSlides, servicesItems, testimonialsSlides, testimonialsCircles };
+//========================================================================================================================================================
+
+const companiesItems: IImages[] = [
+    {
+        alt: "company 01",
+        img: companiesImages.company01,
+        imgWEBP: companiesImages.company01_WEBP,
+    },
+    {
+        alt: "company 02",
+        img: companiesImages.company02,
+        imgWEBP: companiesImages.company02_WEBP,
+    },
+    {
+        alt: "company 02",
+        img: companiesImages.company02,
+        imgWEBP: companiesImages.company02_WEBP,
+    },
+    {
+        alt: "company 01",
+        img: companiesImages.company01,
+        imgWEBP: companiesImages.company01_WEBP,
+    },
+    {
+        alt: "company 01",
+        img: companiesImages.company01,
+        imgWEBP: companiesImages.company01_WEBP,
+    },
+    {
+        alt: "company 02",
+        img: companiesImages.company02,
+        imgWEBP: companiesImages.company02_WEBP,
+    },
+];
+
+//========================================================================================================================================================
+
+const spheresItems: ISphere[] = [
+    {
+        icon: "_icon-axe",
+        title: "Research",
+        text: "Eget nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Eu feugiat pretium nibh ipsum consequat nisl vel pretium.",
+    },
+    {
+        icon: "_icon-nuclear",
+        title: "Marketing",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorum similique distinctio deserunt? Quae, ipsam.",
+    },
+    {
+        icon: "_icon-scales",
+        title: "Results",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nobis reprehenderit aliquid in nam ut velit voluptate consequuntur minus inventore!",
+    },
+];
+
+export default {
+    socialLinks,
+    benefitsSlides,
+    servicesItems,
+    testimonialsSlides,
+    testimonialsCircles,
+    companiesItems,
+    spheresItems,
+};

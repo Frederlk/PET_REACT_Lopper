@@ -14,3 +14,10 @@ export { default as Benefits } from "./HomePage/Benefits";
 export { default as BenefitsSwiper } from "./HomePage/BenefitsSwiper";
 export { default as Intro } from "./HomePage/Intro";
 export { default as Mainscreen } from "./HomePage/Mainscreen";
+
+export { default as Companies } from "./AboutPage/Companies";
+export { default as Spheres } from "./AboutPage/Spheres";
+export { default as SphereItem } from "./AboutPage/SphereItem";
+export { default as What } from "./AboutPage/What";
+export { default as WeDo } from "./AboutPage/WeDo";
+export { default as WeDoCard } from "./AboutPage/WeDoCard";

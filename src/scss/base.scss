@@ -153,3 +153,47 @@ a._c3 {
         color: $c08;
     }
 }
+//========================================================================================================================================================
+
+.icon {
+    flex: 0 0 rem(72);
+    width: rem(72);
+    height: rem(22);
+    border-radius: 50%;
+    background-color: rgba(196, 196, 196, 0.02);
+    border: rem(1) solid rgba(255, 255, 255, 0.1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("margin-bottom", 24, 12);
+    &._icon-nuclear,
+    &._icon-skittles {
+        &::before {
+            font-size: rem(30);
+        }
+    }
+    &._icon-axe,
+    &._icon-scales {
+        &::before {
+            font-size: rem(20);
+        }
+    }
+    &._icon-brain {
+        &::before {
+            font-size: rem(25);
+        }
+    }
+    &._icon-fort {
+        &::before {
+            font-size: rem(34);
+        }
+    }
+    @media (max-width: $mobileSmall) {
+        flex: 0 0 rem(56);
+        width: rem(56);
+        height: rem(56);
+        &::before {
+            font-size: rem(20) !important;
+        }
+    }
+}

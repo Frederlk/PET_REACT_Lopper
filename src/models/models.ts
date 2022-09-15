@@ -3,7 +3,7 @@ export interface ISocialLinks {
     iconClass: string;
 }
 
-export interface IBenefitsSlides {
+export interface IImages {
     img: string;
     imgWEBP: string;
     alt: string;
@@ -28,4 +28,10 @@ export interface ITestimonialCircle {
     img: string;
     imgWEBP: string;
     color: string;
+}
+
+export interface ISphere {
+    title: string;
+    text: string;
+    icon: string;
 }

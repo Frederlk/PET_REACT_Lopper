@@ -104,4 +104,15 @@ const avatarsImages = {
     avatar14_WEBP,
 };
 
-export default { defaultImages, benefitsImages, avatarsImages };
+import company01 from "../assets/img/company/01.svg";
+import company01_WEBP from "../assets/img/company/01.webp";
+import company02 from "../assets/img/company/02.svg";
+import company02_WEBP from "../assets/img/company/02.webp";
+const companiesImages = {
+    company01,
+    company01_WEBP,
+    company02,
+    company02_WEBP,
+};
+
+export default { defaultImages, benefitsImages, avatarsImages, companiesImages };

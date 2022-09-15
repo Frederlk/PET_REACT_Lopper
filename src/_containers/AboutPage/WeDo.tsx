@@ -1,18 +1,15 @@
-import { FC, useEffect } from "react";
+import { FC,  } from "react";
 import { images } from "../../constants";
-import { spollers } from "../../helpers/functions";
 import { Picture } from "../../_components";
 import WeDoCard from "./WeDoCard";
 
 const { intro, intro_WEBP } = images.defaultImages;
 
 const WeDo: FC = () => {
-    // useEffect(() => {
-    //     spollers();
-    // }, []);
+
 
     return (
-        <section className="page__wedo wedo">
+        <section className="wedo">
             <div className="wedo__top ">
                 <div className="wedo__container">
                     <div className="wedo__label">What we do</div>

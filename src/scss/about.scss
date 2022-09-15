@@ -220,3 +220,172 @@
         }
     }
 }
+
+//========================================================================================================================================================
+
+.companies {
+    &__container {
+    }
+
+    &__top {
+        @include adaptiveValue("padding-top", 108, 40);
+        @include adaptiveValue("padding-bottom", 108, 40);
+        text-align: center;
+        margin: 0 auto;
+        @media (min-width: $mobile) {
+            max-width: rem(700);
+        }
+    }
+
+    &__body {
+        position: relative;
+        @include adaptiveValue("padding-top", 108, 36);
+        @include adaptiveValue("padding-bottom", 108, 36);
+    }
+
+    &__container {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__inner {
+        @media (min-width: em(600.98)) {
+            margin-right: rem(100);
+            margin-left: auto;
+            width: rem(460);
+            @media (max-width: $pc) {
+                margin-right: 0;
+            }
+            @media (max-width: $tablet) {
+                width: 50%;
+            }
+        }
+        @media (max-width: em(600.98)) {
+            text-align: center;
+        }
+    }
+
+    &__text {
+        @extend %text_sm;
+        font-weight: 700;
+        color: $c08;
+        @include adaptiveValue("margin-bottom", 36, 24);
+    }
+
+    &__grid {
+        display: grid;
+        align-items: center;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("row-gap", 98, 36);
+        column-gap: rem(48);
+    }
+
+    &__icon {
+        img {
+            max-width: 100%;
+        }
+    }
+
+    &__bg {
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: multiply;
+            background: $c06;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            width: percent(800, 1440);
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: linear-gradient(270deg, $c06 1%, rgba(0, 240, 181, 0.1) 18.8%);
+            z-index: 3;
+            @media (max-width: $tablet) {
+                width: 50%;
+            }
+            @media (max-width: em(600.98)) {
+                width: 100%;
+            }
+        }
+    }
+
+    &__image-ibg {
+        position: absolute;
+        width: percent(800, 1440);
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        img {
+            filter: grayscale(100%);
+        }
+        @media (max-width: $tablet) {
+            width: 50%;
+        }
+        @media (max-width: em(600.98)) {
+            width: 100%;
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.spheres {
+    @include adaptiveValue("padding-top", 144, 40);
+    @include adaptiveValue("padding-bottom", 280, 80);
+
+    &__container {
+    }
+
+    &__top {
+    }
+
+    &__subtitle {
+        @extend %h5;
+        @include adaptiveValue("margin-bottom", 64, 36);
+    }
+
+    &__grid {
+        @media (min-width: $tablet) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: rem(32);
+        }
+    }
+
+    &__item {
+    }
+}
+
+.item-spheres {
+    border: rem(1) solid rgba(246, 16, 103, 0.5);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @include adaptiveValue("padding-top", 54, 24);
+    @include adaptiveValue("padding-bottom", 54, 24);
+    @include adaptiveValue("padding-right", 36, 18);
+    @include adaptiveValue("padding-left", 36, 18);
+    &__icon {
+        @include adaptiveValue("margin-bottom", 18, 12);
+        border: rem(1) solid rgba(246, 16, 103, 0.5);
+        color: $c01;
+    }
+
+    &__title {
+        @extend %h5;
+        @include adaptiveValue("margin-bottom", 12, 8);
+    }
+
+    &__text {
+        flex: 1 1 auto;
+        @extend %text_rg;
+    }
+}
