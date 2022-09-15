@@ -1,5 +1,13 @@
 import bgMain from "../assets/img/content/01.jpg";
 import bgMain_WEBP from "../assets/img/content/01.webp";
+import bgTeam from "../assets/img/content/09.jpg";
+import bgTeam_WEBP from "../assets/img/content/09.webp";
+import bgService from "../assets/img/content/05.jpg";
+import bgService_WEBP from "../assets/img/content/05.webp";
+import bgContacts from "../assets/img/content/13.jpg";
+import bgContacts_WEBP from "../assets/img/content/13.webp";
+import building from "../assets/img/content/04.jpg";
+import building_WEBP from "../assets/img/content/04.webp";
 import intro from "../assets/img/content/02.jpg";
 import intro_WEBP from "../assets/img/content/02.webp";
 import map01 from "../assets/img/map.svg";
@@ -8,6 +16,14 @@ import map01_WEBP from "../assets/img/map.webp";
 const defaultImages = {
     bgMain,
     bgMain_WEBP,
+    bgTeam,
+    bgTeam_WEBP,
+    bgService,
+    bgService_WEBP,
+    bgContacts,
+    bgContacts_WEBP,
+    building,
+    building_WEBP,
     intro,
     intro_WEBP,
     map01,

@@ -1,5 +1,9 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet";
+import { images } from "../constants";
+import { Preview } from "../_components";
+
+const { bgContacts, bgContacts_WEBP } = images.defaultImages;
 
 const ContactsPage: FC = () => {
     return (
@@ -9,23 +13,7 @@ const ContactsPage: FC = () => {
                 <title>Contacts</title>
             </Helmet>
 
-            <section className="page__preview preview">
-                <div className="preview__wrapper">
-                    <div className="preview__content">
-                        <div className="preview__container _container">
-                            <div className="preview__inner">
-                                <h1 className="preview__title">Contact us</h1>
-                                <div className="preview__subtitle">We build great business</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="preview__bg">
-                        <div className="preview__image _ibg">
-                            <img src="img/content/13.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Preview title="Contact us" img={bgContacts} imgWebp={bgContacts_WEBP} />
 
             <section className="page__info info">
                 <div className="info__wrapper">

@@ -1,6 +1,9 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet";
-import { Testimonials } from "../_components";
+import { images } from "../constants";
+import { Newsletter, Preview, Testimonials } from "../_components";
+
+const { bgMain, bgMain_WEBP } = images.defaultImages;
 
 const AboutPage: FC = () => {
     return (
@@ -10,23 +13,7 @@ const AboutPage: FC = () => {
                 <title>About</title>
             </Helmet>
 
-            <section className="page__preview preview">
-                <div className="preview__wrapper">
-                    <div className="preview__content">
-                        <div className="preview__container _container">
-                            <div className="preview__inner">
-                                <h1 className="preview__title">About us</h1>
-                                <div className="preview__subtitle">We build great business</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="preview__bg">
-                        <div className="preview__image _ibg">
-                            <img src="img/content/01.jpg" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Preview title="About us" img={bgMain} imgWebp={bgMain_WEBP} />
 
             <section className="page__what what">
                 <div className="what__wrapper">
@@ -245,29 +232,7 @@ const AboutPage: FC = () => {
 
             <Testimonials />
 
-            <section className="page__newsletter newsletter">
-                <div className="newsletter__wrapper">
-                    <div className="newsletter__container _container">
-                        <div className="newsletter__inner">
-                            <h2 className="newsletter__title">Subscribe to our newsletter</h2>
-                            <div className="newsletter__text">Cras pulvinar mattis nunc sed blandit.</div>
-                            <form action="#" className="newsletter__form">
-                                <input
-                                    autoComplete="off"
-                                    type="email"
-                                    name="newsletter__email"
-                                    data-error="Error"
-                                    data-value="Enter email"
-                                    className="newsletter__input input"
-                                />
-                                <button type="submit" className="newsletter__btn btn btn_news">
-                                    subscribe <span className="_icon-arrow"></span>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <Newsletter />
         </>
     );
 };

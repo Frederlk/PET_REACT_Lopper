@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-import { Formik, Form as FormikForm, Field } from "formik";
+import { Formik, Form as FormikForm } from "formik";
 import * as Yup from "yup";
 import Input from "./Input";
 
@@ -12,7 +12,7 @@ const validationScheme = Yup.object({
     email: Yup.string().email("Invalid Email").required("Requried!"),
 });
 
-export const Newsletter: FC = () => {
+const Newsletter: FC = () => {
     const [sended, setSended] = useState(false);
 
     useEffect(() => {
@@ -56,3 +56,5 @@ export const Newsletter: FC = () => {
         </section>
     );
 };
+
+export default Newsletter;

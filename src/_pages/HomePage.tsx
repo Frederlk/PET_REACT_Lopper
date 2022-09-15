@@ -1,7 +1,6 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet";
-import { Testimonials } from "../_components";
-import { Newsletter } from "../_components/Newsletter";
+import { Newsletter, Testimonials } from "../_components";
 import { Amazing, Benefits, Intro, Mainscreen } from "../_containers";
 
 const HomePage: FC = () => {

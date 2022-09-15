@@ -25,3 +25,131 @@
         object-fit: contain;
     }
 }
+
+//<Заголоки>====================================================================================================
+%h1 {
+    font-weight: 900;
+    @include adaptiveValue("font-size", 99, 36);
+    line-height: math.div(118, 99);
+}
+%h2 {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 54, 32);
+    line-height: math.div(80, 54);
+}
+%h3 {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 45, 28);
+    line-height: math.div(67, 45);
+}
+%h4 {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 32, 24);
+    line-height: math.div(53, 36);
+}
+%h5 {
+    font-weight: 500;
+    @include adaptiveValue("font-size", 27, 20);
+    line-height: math.div(40, 27);
+}
+%h6 {
+    font-weight: 500;
+    font-size: rem(18);
+    line-height: math.div(27, 18);
+}
+//</Заголовки>====================================================================================================
+
+//<Текст>====================================================================================================
+%text_sm {
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: math.div(26, 16);
+}
+%text_rg {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: math.div(29, 18);
+}
+%text_md {
+    @include adaptiveValue("font-size", 20, 18);
+    line-height: math.div(32, 20);
+}
+%text_lg {
+    @include adaptiveValue("font-size", 22, 20);
+    line-height: math.div(35, 22);
+}
+//</Текст>====================================================================================================
+
+//<Иной Текст>====================================================================================================
+
+%label_lg {
+    font-weight: 800;
+    font-size: rem(18);
+    line-height: math.div(37, 18);
+    letter-spacing: rem(4);
+    text-transform: uppercase;
+}
+%label_md {
+    font-weight: 800;
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    letter-spacing: rem(4);
+    text-transform: uppercase;
+}
+%label_sm {
+    font-weight: 800;
+    font-size: rem(13);
+    line-height: math.div(26, 13);
+    letter-spacing: rem(4);
+    text-transform: uppercase;
+}
+
+%misc_nav {
+    font-weight: 800;
+    font-size: rem(14);
+    line-height: math.div(30, 14);
+    letter-spacing: rem(2);
+}
+%misc_footer {
+    font-weight: 700;
+    font-size: rem(13);
+    line-height: math.div(26, 13);
+    letter-spacing: rem(1);
+}
+%misc_btn {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(20, 14);
+    letter-spacing: rem(2);
+    text-transform: uppercase;
+}
+
+%quote_lg {
+    font-family: "Noticia Text";
+    font-style: italic;
+    @include adaptiveValue("font-size", 36, 20);
+    line-height: math.div(64, 36);
+}
+%quote_sm {
+    font-family: "Noticia Text";
+    font-style: italic;
+    @include adaptiveValue("font-size", 22, 18);
+    line-height: math.div(40, 22);
+}
+//</Иной Текст>====================================================================================================
+
+._c1 {
+    color: $c06;
+}
+._c2 {
+    color: $c01;
+}
+._c3 {
+    color: $c_warning;
+}
+a._c1,
+a._c2,
+a._c3 {
+    transition: color 0.3s ease 0s;
+    &:hover {
+        color: $c08;
+    }
+}

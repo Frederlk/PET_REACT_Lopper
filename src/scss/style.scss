@@ -169,16 +169,13 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "about";
 
 //========================================================================================================================================================
 
-// .page {
-//     flex: 1 1 auto;
-//     @media (min-width: em(600.98)) {
-//         @include adaptiveValue("padding-top", 144, 55);
-//     }
-//     padding-top: 55px;
-//     &_home {
-//         padding-top: 0 !important;
-//     }
-// }
+.page {
+    @include adaptiveValue("padding-top", 144, 55, 1170, 600.98, 1);
+    .home-wrapper & {
+        padding-top: 0 !important;
+    }
+}
