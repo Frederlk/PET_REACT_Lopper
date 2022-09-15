@@ -1,9 +1,8 @@
-import { FC, memo, useEffect } from "react";
+import { FC, memo } from "react";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 import { Pagination, Autoplay, Lazy, Navigation } from "swiper";
 
 import { data } from "../../constants";
-import dynamicAdaptive from "../../helpers/dynamic_adapt";
 import { Picture } from "../../_components";
 
 const swiperProps: SwiperProps = {
@@ -39,10 +38,6 @@ const benefitsSlides = data.benefitsSlides.map(({ alt, img, imgWEBP }, i) => (
 ));
 
 const BenefitsSwiper: FC = () => {
-    useEffect(() => {
-        dynamicAdaptive();
-    }, []);
-
     return (
         <div className="benefits__slider">
             <div className="benefits__swiper-wrap">

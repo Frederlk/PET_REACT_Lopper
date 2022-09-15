@@ -1,6 +1,7 @@
 import { useEffect, FC } from "react";
 import { useLocation, useRoutes } from "react-router-dom";
-import { _closeAllSpollers } from "../helpers/functions";
+import dynamicAdaptive from "../helpers/dynamic_adapt";
+import { spollers, _closeAllSpollers } from "../helpers/functions";
 import { routesConfig } from "../routes";
 import useMenu from "../store/slices/menu/useMenu";
 
@@ -9,6 +10,8 @@ const PageChange: FC = () => {
     const { onCloseMenu } = useMenu();
 
     useEffect(() => {
+        dynamicAdaptive();
+        spollers();
         window.scrollTo(0, 0);
         onCloseMenu();
         _closeAllSpollers();
@@ -20,6 +23,7 @@ const PageChange: FC = () => {
             wrapper?.classList.remove("home-wrapper");
         }
     }, [pathname]);
+
     return null;
 };
 

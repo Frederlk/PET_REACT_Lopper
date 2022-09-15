@@ -1,0 +1,222 @@
+.what {
+    @include adaptiveValue("padding-top", 108, 40);
+    @include adaptiveValue("padding-bottom", 108, 40);
+    &__container {
+    }
+
+    &__top {
+        @include adaptiveValue("margin-bottom", 72, 36);
+    }
+
+    &__subtitle {
+        @extend %h5;
+        @media (min-width: $mobile) {
+            max-width: rem(754);
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("column-gap", 136, 40, 1170, 600.98, 1);
+        @media (max-width: em(600.98)) {
+            grid-template-columns: 1fr;
+            @include adaptiveValue("row-gap", 40, 24, 600.98, 320, 1);
+        }
+    }
+
+    &__article {
+    }
+
+    &__item-title {
+        @extend %h6;
+        @include adaptiveValue("margin-bottom", 12, 8);
+    }
+
+    &__text {
+        @extend %text_rg;
+        color: $c_maintext;
+    }
+}
+
+//========================================================================================================================================================
+
+.wedo {
+    &__top {
+        background-color: $c02;
+        @include adaptiveValue("padding-top", 108, 24);
+        @include adaptiveValue("padding-bottom", 108, 24);
+    }
+
+    &__label {
+        @extend %label_sm;
+        color: $c08;
+        @include adaptiveValue("margin-bottom", 12, 8);
+    }
+
+    &__title {
+        @extend %h3;
+        color: $c08;
+    }
+
+    &__flex {
+        @media (min-width: $mobile) {
+            display: flex;
+        }
+    }
+
+    &__content {
+        @media (min-width: $mobile) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__container {
+    }
+
+    &__inner {
+        @media (min-width: $mobile) {
+            @include adaptiveValue("width", 880, 280);
+        }
+        @media (min-width: $mobileSmall) and (max-width: $mobile) {
+            margin-right: rem(-15);
+        }
+    }
+
+    &__card {
+    }
+
+    &__image-side {
+        flex: 0 0 100%;
+        transform: translate(-100%, 0px);
+        pointer-events: none;
+        @media (max-width: $mobile) {
+            display: none;
+        }
+    }
+
+    &__image-wrap {
+        position: relative;
+        padding-left: rem(10);
+        margin-left: auto;
+        width: 50%;
+        height: 100%;
+        @media (min-width: $tablet) {
+            height: calc(100% + rem(90));
+            margin-top: rem(-90);
+        }
+    }
+
+    &__image-ibg {
+        pointer-events: all;
+        position: absolute;
+        width: calc(100% - rem(295));
+        height: 100%;
+        top: 0;
+        right: 0;
+        @media (max-width: em(1200)) {
+            @include adaptiveValue("width", 305, 180, 1200, 767.98, 1);
+        }
+    }
+}
+
+.card-wedo {
+    @media (min-width: $mobileSmall) {
+        display: flex;
+    }
+    &:nth-child(3n + 1) {
+        .card-wedo__text {
+            background-color: $c02;
+            @media (max-width: $mobileSmall) {
+                background-color: $c03;
+            }
+        }
+    }
+    &:nth-child(3n + 2) {
+        .card-wedo__text {
+            background-color: $c04;
+            @media (min-width: $mobileSmall) {
+                &::before {
+                    width: rem(30);
+                }
+            }
+        }
+    }
+    &:nth-child(3n + 3) {
+        .card-wedo__text {
+            background-color: $c05;
+        }
+    }
+
+    &__title {
+        color: $c01;
+        @extend %h5;
+        display: flex;
+        align-items: center;
+        @media (max-width: $mobileSmall) {
+            flex-direction: row-reverse;
+            justify-content: space-between;
+            padding: rem(12) 0;
+            &:before {
+                transform: rotate(90deg);
+                transition: transform 0.5s ease 0s;
+            }
+            &._spoller-active:before {
+                transform: rotate(-90deg);
+            }
+        }
+        @media (min-width: $mobileSmall) {
+            flex: 0 0 percent(264, 880);
+            margin-right: rem(42);
+            &::before {
+                display: none;
+            }
+            @media (max-width: em(600.98)) {
+                flex: 0 1 33.333%;
+            }
+        }
+    }
+
+    &__body {
+        @media (max-width: $mobileSmall) {
+            margin: 0px rem(-15) !important;
+        }
+    }
+
+    &__text {
+        @extend %text_rg;
+        color: $c08;
+        display: flex;
+        align-items: center;
+        padding-top: rem(18);
+        padding-bottom: rem(18);
+        position: relative;
+        flex: 1 1 auto;
+        @include adaptiveValue("min-height", 300, 150);
+        @include adaptiveValue("padding-right", 128, 64, 1170, 991.98, 1);
+        @include adaptiveValue("padding-left", 98, 64, 1170, 991.98, 1);
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 0;
+            top: 0;
+            right: 100%;
+            background-color: inherit;
+            transition: background-color 0.3s ease 0s;
+        }
+        @media (max-width: $tablet) {
+            @include adaptiveValue("padding-right", 64, 18, 1170, 991.98, 1);
+            @include adaptiveValue("padding-left", 64, 18, 1170, 991.98, 1);
+        }
+        @media (max-width: em(600.98)) {
+            flex: 0 1 66.666%;
+        }
+        @media (max-width: $mobileSmall) {
+            cursor: pointer;
+            &::before {
+                display: none;
+            }
+        }
+    }
+}

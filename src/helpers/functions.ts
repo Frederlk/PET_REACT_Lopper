@@ -1,7 +1,5 @@
 export const _slideUp = (target: HTMLElement, duration = 500, showmore = 0) => {
     if (!target.classList.contains("_slide")) {
-        console.log("slideUp");
-
         target.classList.add("_slide");
         target.style.transitionProperty = "height, margin, padding";
         target.style.transitionDuration = duration + "ms";
