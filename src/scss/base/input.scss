@@ -16,32 +16,39 @@ textarea {
     border: rem(2) solid $c09;
     @extend %text_sm;
     color: $c_maintext;
+    outline: none;
     @media (any-hover: hover) {
         &:hover {
             border: rem(2) solid $c02;
             box-shadow: inset 0px 0px rem(8) rgba(0, 0, 0, 0.5);
         }
     }
-    &._focus {
+    &:focus {
         color: $c_headers;
         border: rem(2) solid $c06;
+        box-shadow: none;
     }
     &._error {
         border: rem(2) solid $c_error;
         color: $c_error;
+        box-shadow: none;
     }
     &._success {
         border: rem(2) solid $c_success;
         color: $c_success;
+        box-shadow: none;
     }
     &:disabled {
         background-color: $c_text !important;
         border: rem(2) solid $c08 !important;
+        box-shadow: none;
+    }
+    &:-webkit-autofill {
+        color: $c_headers;
+        border: rem(2) solid $c06;
     }
 }
-.form__error {
-    color: $c_error;
-}
+
 textarea.input {
     resize: none;
 }

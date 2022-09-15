@@ -421,6 +421,87 @@ a._c3 {
     }
 }
 
+.newsletter {
+    @include adaptiveValue("padding-top", 128, 40);
+    @include adaptiveValue("padding-bottom", 140, 40);
+
+    &__container {
+        text-align: center;
+        @media (min-width: $mobile) {
+            max-width: rem(620);
+        }
+    }
+
+    &__title {
+        @extend %h3;
+        @include adaptiveValue("margin-bottom", 24, 12);
+    }
+
+    &__text {
+        @include adaptiveValue("margin-bottom", 64, 32);
+        @extend %h6;
+        color: $c_maintext;
+    }
+
+    &__form {
+        position: relative;
+        @media (min-width: $mobileSmall) {
+            display: flex;
+            align-items: center;
+        }
+        ._input__error {
+            margin-top: rem(10);
+            position: absolute;
+            top: 100%;
+            left: 0;
+            @extend %label_md;
+            color: $c_error;
+        }
+    }
+
+    &__input {
+        @extend %label_lg;
+        color: $c_text;
+        border-top: rem(2) solid transparent;
+        border-right: rem(2) solid transparent;
+        border-left: rem(2) solid transparent;
+        border-bottom: rem(2) solid $c09;
+        @media (min-width: $mobileSmall) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__btn {
+        @media (min-width: $mobileSmall) {
+            flex: 0 0 rem(230);
+        }
+        @media (min-width: $mobileSmall) and (max-width: $mobile) {
+            flex: 0 0 rem(210);
+        }
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
+        span {
+            &::before {
+                transform: translate(rem(2), 0px);
+            }
+        }
+    }
+
+    &__subscribed {
+        margin-top: rem(10);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        @extend %label_md;
+        color: $c_success;
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
+
 //========================================================================================================================================================
 
 .page404 {
