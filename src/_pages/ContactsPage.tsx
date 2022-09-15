@@ -1,8 +1,14 @@
 import { FC } from "react";
+import { Helmet } from "react-helmet";
 
 const ContactsPage: FC = () => {
     return (
         <>
+            <Helmet>
+                <meta name="Contacts" content="Contacts" />
+                <title>Contacts</title>
+            </Helmet>
+
             <section className="page__preview preview">
                 <div className="preview__wrapper">
                     <div className="preview__content">

@@ -15,3 +15,17 @@ export interface IServiceItem {
     icon: string;
     text: string;
 }
+
+export interface ITestimonialSlide {
+    img: string;
+    imgWEBP: string;
+    name: string;
+    company?: string;
+    text: string;
+}
+
+export interface ITestimonialCircle {
+    img: string;
+    imgWEBP: string;
+    color: string;
+}

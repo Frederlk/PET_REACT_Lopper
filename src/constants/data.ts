@@ -1,5 +1,14 @@
-import { IBenefitsSlides, IServiceItem, ISocialLinks } from "./../models/models";
+import {
+    IBenefitsSlides,
+    IServiceItem,
+    ISocialLinks,
+    ITestimonialCircle,
+    ITestimonialSlide,
+} from "./../models/models";
+
 import images from "./images";
+const { benefitsImages, avatarsImages } = images;
+
 //========================================================================================================================================================
 
 const socialLinks: ISocialLinks[] = [
@@ -26,7 +35,6 @@ const socialLinks: ISocialLinks[] = [
 ];
 //========================================================================================================================================================
 
-const { benefitsImages } = images;
 const benefitsSlides: IBenefitsSlides[] = [
     {
         img: benefitsImages.benefits01,
@@ -86,4 +94,67 @@ const servicesItems: IServiceItem[] = [
     },
 ];
 
-export default { socialLinks, benefitsSlides, servicesItems };
+//========================================================================================================================================================
+
+const testimonialsSlides: ITestimonialSlide[] = [
+    {
+        img: avatarsImages.avatar09,
+        imgWEBP: avatarsImages.avatar09_WEBP,
+        name: "Kerry Johnes",
+        company: "Some Company",
+        text: "Lectus arcu bibendum at varius. Adipiscing diam donec adipiscing tristique.",
+    },
+    {
+        img: avatarsImages.avatar10,
+        imgWEBP: avatarsImages.avatar10_WEBP,
+        name: "Konan Wizard",
+        company: "Desert",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam modi commodi tempore, illum placeat id?",
+    },
+    {
+        img: avatarsImages.avatar11,
+        imgWEBP: avatarsImages.avatar11_WEBP,
+        name: "Tim Boil",
+        company: "Grape",
+        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus aliquid, error voluptatem tempore optio doloremque.",
+    },
+];
+const testimonialsCircles: ITestimonialCircle[] = [
+    {
+        img: avatarsImages.avatar02,
+        imgWEBP: avatarsImages.avatar02_WEBP,
+        color: "_bc3",
+    },
+    {
+        img: avatarsImages.avatar03,
+        imgWEBP: avatarsImages.avatar03_WEBP,
+        color: "_bc1",
+    },
+    {
+        img: avatarsImages.avatar04,
+        imgWEBP: avatarsImages.avatar04_WEBP,
+        color: "_bc2",
+    },
+    {
+        img: avatarsImages.avatar05,
+        imgWEBP: avatarsImages.avatar05_WEBP,
+        color: "_bc2",
+    },
+    {
+        img: avatarsImages.avatar06,
+        imgWEBP: avatarsImages.avatar06_WEBP,
+        color: "_bc1",
+    },
+    {
+        img: avatarsImages.avatar07,
+        imgWEBP: avatarsImages.avatar07_WEBP,
+        color: "_bc2",
+    },
+    {
+        img: avatarsImages.avatar08,
+        imgWEBP: avatarsImages.avatar08_WEBP,
+        color: "_bc3",
+    },
+];
+
+export default { socialLinks, benefitsSlides, servicesItems, testimonialsSlides, testimonialsCircles };

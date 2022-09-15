@@ -1,4 +1,4 @@
-import { FC, useMemo, memo, useEffect } from "react";
+import { FC, memo, useEffect } from "react";
 import { Swiper, SwiperSlide, SwiperProps } from "swiper/react";
 import { Pagination, Autoplay, Lazy, Navigation } from "swiper";
 
@@ -30,19 +30,15 @@ const swiperProps: SwiperProps = {
     },
 };
 
-const BenefitsSwiper: FC = () => {
-    const benefitsSlides = useMemo(
-        () =>
-            data.benefitsSlides.map(({ alt, img, imgWEBP }, i) => (
-                <SwiperSlide key={i} className="benefits__slide">
-                    <div className="benefits__image-ibg">
-                        <Picture srcWebp={imgWEBP} fallbackSrc={img} alt={alt} />
-                    </div>
-                </SwiperSlide>
-            )),
-        [data.benefitsSlides]
-    );
+const benefitsSlides = data.benefitsSlides.map(({ alt, img, imgWEBP }, i) => (
+    <SwiperSlide key={i} className="benefits__slide">
+        <div className="benefits__image-ibg">
+            <Picture srcWebp={imgWEBP} fallbackSrc={img} alt={alt} />
+        </div>
+    </SwiperSlide>
+));
 
+const BenefitsSwiper: FC = () => {
     useEffect(() => {
         dynamicAdaptive();
     }, []);
