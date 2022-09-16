@@ -56,3 +56,11 @@ export interface ITeamItem {
     link03: string;
     link03Icon: string;
 }
+
+export interface IGalleryItem {
+    title: string;
+    text: string;
+    img: string;
+    imgWebp: string;
+    green?: boolean;
+}

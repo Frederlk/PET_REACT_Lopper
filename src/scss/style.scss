@@ -159,6 +159,7 @@ body {
 // Подключение базовых стилей, шаблонов (заготовок) и вспомогательных  классов
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
+@import "gallery/lightgallery";
 
 // Подключение стилей общих элементов проекта
 @import "common";
@@ -168,10 +169,11 @@ body {
 @import "footer";
 
 // Подключение стилей отдельных страниц
-@import "home";
-@import "about";
-@import "services";
-@import "team";
+@import "_pages/home";
+@import "_pages/about";
+@import "_pages/services";
+@import "_pages/team";
+@import "_pages/gallery";
 
 //========================================================================================================================================================
 

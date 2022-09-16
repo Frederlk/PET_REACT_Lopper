@@ -25,3 +25,5 @@ export { default as Digits } from "./ServicesPage/Digits";
 export { default as Steps } from "./ServicesPage/Steps";
 
 export { default as Team } from "./WorkPage/Team";
+
+export { default as Gallery } from "./GalleryPage/Gallery";

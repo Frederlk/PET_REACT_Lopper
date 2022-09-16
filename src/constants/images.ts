@@ -130,4 +130,27 @@ const stepsImages = {
     step03_WEBP,
 };
 
-export default { defaultImages, benefitsImages, avatarsImages, companiesImages, stepsImages };
+import gallery01 from "../assets/img/content/07.jpg";
+import gallery01_WEBP from "../assets/img/content/07.webp";
+import gallery02 from "../assets/img/content/04.jpg";
+import gallery02_WEBP from "../assets/img/content/04.webp";
+import gallery03 from "../assets/img/content/11.jpg";
+import gallery03_WEBP from "../assets/img/content/11.webp";
+import gallery04 from "../assets/img/content/10.jpg";
+import gallery04_WEBP from "../assets/img/content/10.webp";
+import gallery05 from "../assets/img/content/12.jpg";
+import gallery05_WEBP from "../assets/img/content/12.webp";
+const galleryImages = {
+    gallery01,
+    gallery01_WEBP,
+    gallery02,
+    gallery02_WEBP,
+    gallery03,
+    gallery03_WEBP,
+    gallery04,
+    gallery04_WEBP,
+    gallery05,
+    gallery05_WEBP,
+};
+
+export default { defaultImages, benefitsImages, avatarsImages, companiesImages, stepsImages, galleryImages };

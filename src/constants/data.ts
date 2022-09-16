@@ -6,10 +6,11 @@ import {
     IImages,
     ISphere,
     ITeamItem,
+    IGalleryItem,
 } from "./../models/models";
 
 import images from "./images";
-const { benefitsImages, avatarsImages, companiesImages } = images;
+const { benefitsImages, avatarsImages, companiesImages, galleryImages } = images;
 
 //========================================================================================================================================================
 
@@ -290,6 +291,43 @@ const teamItems: ITeamItem[] = [
     },
 ];
 
+//========================================================================================================================================================
+
+const galleryItems: IGalleryItem[] = [
+    {
+        img: galleryImages.gallery01,
+        imgWebp: galleryImages.gallery01_WEBP,
+        title: "Photo name",
+        text: "Etiam dignissim diam quis enim lobortis.",
+    },
+    {
+        img: galleryImages.gallery02,
+        imgWebp: galleryImages.gallery02_WEBP,
+        title: "Photo name",
+        text: "Etiam dignissim diam quis enim lobortis.",
+        green: true,
+    },
+    {
+        img: galleryImages.gallery03,
+        imgWebp: galleryImages.gallery03_WEBP,
+        title: "Photo name",
+        text: "Etiam dignissim diam quis enim lobortis.",
+    },
+    {
+        img: galleryImages.gallery04,
+        imgWebp: galleryImages.gallery04_WEBP,
+        title: "Photo name",
+        text: "Etiam dignissim diam quis enim lobortis.",
+        green: true,
+    },
+    {
+        img: galleryImages.gallery05,
+        imgWebp: galleryImages.gallery05_WEBP,
+        title: "Photo name",
+        text: "Etiam dignissim diam quis enim lobortis.",
+    },
+];
+
 export default {
     socialLinks,
     benefitsSlides,
@@ -299,4 +337,5 @@ export default {
     companiesItems,
     spheresItems,
     teamItems,
+    galleryItems,
 };
