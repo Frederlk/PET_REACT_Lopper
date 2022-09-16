@@ -138,12 +138,18 @@
 
     &__body {
         @media (max-width: $mobileSmall) {
-            @include adaptiveValue("padding-bottom", 18, 10);
+            ._loaded & {
+                @include adaptiveValue("padding-bottom", 18, 10);
+            }
         }
     }
 
     &__list {
-        li {
+        @media (max-width: $mobileSmall) {
+            display: none;
+            ._loaded & {
+                display: block;
+            }
         }
     }
 

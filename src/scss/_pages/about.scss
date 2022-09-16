@@ -361,6 +361,11 @@
     }
 
     &__item {
+        @media (max-width: $tablet) {
+            &:not(:last-child) {
+                margin-bottom: rem(32);
+            }
+        }
     }
 }
 

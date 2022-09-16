@@ -540,7 +540,8 @@
 //========================================================================================================================================================
 
 .page404 {
-    padding: rem(200) 0;
+    @include adaptiveValue("padding-top", 144, 60, 1170, 600.98, 1);
+    @include adaptiveValue("padding-bottom", 144, 100, 1170, 600.98, 1);
     text-align: center;
 
     &__container {
@@ -562,6 +563,10 @@
 
     &__button {
         min-width: rem(160);
+        min-height: rem(56);
+        @media (max-width: $mobileSmall) {
+            width: 100%;
+        }
     }
 }
 
@@ -570,8 +575,9 @@
 .spinner {
     text-align: center;
     margin: rem(100) auto;
-    @include adaptiveValue("width", 300, 150, 991.98, 479.98, 1);
+    @include adaptiveValue("width", 400, 150, 991.98, 479.98, 1);
     @include adaptiveValue("heigth", 300, 150, 991.98, 479.98, 1);
+    max-width: 60%;
     svg {
         circle {
             fill: $mainColor;
