@@ -115,4 +115,19 @@ const companiesImages = {
     company02_WEBP,
 };
 
-export default { defaultImages, benefitsImages, avatarsImages, companiesImages };
+import step01 from "../assets/img/content/06.jpg";
+import step01_WEBP from "../assets/img/content/06.webp";
+import step02 from "../assets/img/content/07.jpg";
+import step02_WEBP from "../assets/img/content/07.webp";
+import step03 from "../assets/img/content/08.jpg";
+import step03_WEBP from "../assets/img/content/08.webp";
+const stepsImages = {
+    step01,
+    step01_WEBP,
+    step02,
+    step02_WEBP,
+    step03,
+    step03_WEBP,
+};
+
+export default { defaultImages, benefitsImages, avatarsImages, companiesImages, stepsImages };

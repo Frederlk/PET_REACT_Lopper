@@ -35,3 +35,11 @@ export interface ISphere {
     text: string;
     icon: string;
 }
+
+export interface IStep {
+    step: string;
+    title: string;
+    text: string;
+    img: string;
+    imgWebp: string;
+}

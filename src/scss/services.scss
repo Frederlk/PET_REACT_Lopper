@@ -1,0 +1,183 @@
+.digits {
+    @include adaptiveValue("padding-top", 108, 40);
+
+    &__container {
+    }
+
+    &__top {
+        text-align: center;
+        @include adaptiveValue("padding-bottom", 128, 40);
+        @media (min-width: $mobile) {
+            margin: 0 auto;
+            max-width: rem(755);
+        }
+    }
+
+    &__subtitle {
+        @extend %h5;
+    }
+
+    &__bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        @include adaptiveValue("margin-bottom", -75, -50);
+    }
+
+    &__item {
+        padding: 0px rem(10);
+        text-align: center;
+        &:first-child {
+            color: $c01;
+        }
+        &:nth-child(2) {
+            color: $c02;
+        }
+        &:last-child {
+            color: $c06;
+        }
+    }
+
+    &__digit {
+        @extend %h1;
+    }
+
+    &__text {
+        @extend %label_sm;
+        color: $c08;
+        @media (min-width: $mobileSmall) {
+            letter-spacing: rem(6);
+        }
+    }
+}
+
+//========================================================================================================================================================
+
+.steps {
+    @include adaptiveValue("padding-top", 108, 40);
+    @include adaptiveValue("padding-bottom", 300, 120);
+
+    &__top {
+        @include adaptiveValue("padding-bottom", 70, 22);
+        text-align: center;
+        @media (min-width: $mobile) {
+            margin: 0 auto;
+            max-width: rem(560);
+        }
+    }
+
+    &__row {
+        display: flex;
+        @media (min-width: em(600.98)) {
+            @include adaptiveValue("margin-bottom", 128, 56);
+        }
+        @media (max-width: em(600.98)) {
+            &:not(:last-child) {
+                @include adaptiveValue("margin-bottom", 56, 40);
+            }
+            flex-wrap: wrap;
+        }
+        &:nth-child(3n + 1) {
+            .steps__image-ibg {
+                &::after {
+                    background-color: $c01;
+                }
+            }
+        }
+        &:nth-child(3n + 2) {
+            .steps__inner {
+                @media (min-width: em(600.98)) {
+                    padding-right: 0;
+                    @include adaptiveValue("padding-left", 120, 20);
+                    margin: 0 0 0 auto;
+                }
+            }
+            .steps__image-ibg {
+                margin: 0;
+                &::after {
+                    background-color: $c06;
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+        &:nth-child(3n + 3) {
+            .steps__image-ibg {
+                &::after {
+                    background-color: $c03;
+                }
+            }
+        }
+    }
+
+    &__content {
+        flex: 1 1 100%;
+        @media (min-width: em(600.98)) {
+            flex: 0 0 100%;
+        }
+        @media (max-width: em(600.98)) {
+            order: 2;
+        }
+    }
+
+    &__container {
+    }
+
+    &__inner {
+        @media (min-width: em(600.98)) {
+            width: 50%;
+            @include adaptiveValue("padding-top", 108, 20);
+            @include adaptiveValue("padding-bottom", 108, 20);
+            @include adaptiveValue("padding-right", 120, 20);
+        }
+    }
+
+    &__step {
+        @extend %label_lg;
+        color: $c01;
+    }
+
+    &__title {
+        @extend %h5;
+        @include adaptiveValue("margin-bottom", 18, 12);
+    }
+
+    &__text {
+        @extend %text_rg;
+        color: $c_maintext;
+    }
+
+    &__image-wrap {
+        flex: 1 1 100%;
+        @media (min-width: em(600.98)) {
+            pointer-events: none;
+            flex: 0 0 100%;
+            transform: translate(-100%, 0px);
+        }
+        @media (max-width: em(600.98)) {
+            order: 1;
+            @include adaptiveValue("margin-bottom", 70, 40);
+        }
+    }
+
+    &__image-ibg {
+        position: relative;
+        pointer-events: all;
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            @include adaptiveValue("height", 108, 24);
+            width: percent(607, 705);
+            transform: translate(0px, 100%);
+        }
+        @media (min-width: em(600.98)) {
+            margin: 0 0 0 auto;
+            width: 50%;
+            height: 100%;
+        }
+        @media (max-width: em(600.98)) {
+            @include adaptiveValue("min-height", 250, 200);
+        }
+    }
+}

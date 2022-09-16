@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
-import { RouteNames } from "../../routes";
-import { data, images } from "../../constants";
-import { Picture, ServiceItem, Top } from "../../_components";
+import { RouteNames } from "../routes";
+import { data, images } from "../constants";
+import { Picture, ServiceItem, Top } from ".";
 
 const servicesItems = data.servicesItems.map((item, i) => (
     <ServiceItem key={item.title + i} item={item} className="amazing__item" />
@@ -10,9 +10,9 @@ const servicesItems = data.servicesItems.map((item, i) => (
 
 const { map01, map01_WEBP } = images.defaultImages;
 
-const Amazing: FC = () => {
+const Amazing: FC<{ servicesPage?: boolean }> = ({ servicesPage = false }) => {
     return (
-        <section className="amazing">
+        <section className={`amazing ${servicesPage ? "amazing_services" : ""}`}>
             <div className="amazing__container">
                 <Top className="amazing__top dark" label="We are Amazing" title="Our services">
                     <p className="amazing__subtitle top__subtitle">
@@ -24,11 +24,13 @@ const Amazing: FC = () => {
                     </div>
                 </Top>
                 <div className="amazing__flex">{servicesItems.length > 0 && servicesItems}</div>
-                <div className="amazing__btn-wrap">
-                    <Link to={RouteNames.SERVICES} className="amazing__btn btn btn_rg">
-                        Learn more
-                    </Link>
-                </div>
+                {!servicesPage && (
+                    <div className="amazing__btn-wrap">
+                        <Link to={RouteNames.SERVICES} className="amazing__btn btn btn_rg">
+                            Learn more
+                        </Link>
+                    </div>
+                )}
             </div>
         </section>
     );
