@@ -1,0 +1,119 @@
+.team {
+    @include adaptiveValue("padding-top", 180, 60);
+    &__top {
+        @include adaptiveValue("padding-bottom", 250, 80);
+        text-align: center;
+        @media (min-width: $mobile) {
+            margin: 0 auto;
+            max-width: rem(560);
+        }
+    }
+
+    &__body {
+        @include adaptiveValue("padding-bottom", 324, 120);
+        background-color: $c05;
+    }
+
+    &__container {
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        @include adaptiveValue("column-gap", 120, 48, 1170, 600.98, 1);
+        @include adaptiveValue("row-gap", 250, 100, 1170, 479.98, 1);
+        @media (min-width: $pc) {
+            padding: 0px rem(48);
+        }
+        @media (max-width: em(600.98)) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (max-width: $mobileSmall) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__image-ibg {
+        border-radius: 50%;
+        overflow: hidden;
+        @include adaptiveValue("margin-top", -120, -50);
+        padding-bottom: 100%;
+        width: 100%;
+        @include adaptiveValue("margin-bottom", 24, 18);
+        @media (max-width: $mobileSmall) {
+            padding-bottom: 70%;
+            max-width: 70%;
+        }
+        img {
+            transition: transform 0.3s ease 0s;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+
+    &__name {
+        @extend %text_lg;
+        font-weight: 700;
+        color: $c08;
+        transition: color 0.3s ease 0s;
+        @media (any-hover: hover) {
+            &:hover {
+                color: $c01;
+            }
+        }
+        flex: 1 1 auto;
+    }
+
+    &__job {
+        @extend %label_sm;
+        color: $c08;
+        opacity: 0.5;
+        letter-spacing: rem(6);
+        margin-bottom: rem(8);
+    }
+
+    &__socials {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__social-item {
+        font-size: rem(18);
+        transition: opacity 0.3s ease 0s;
+        &:not(:last-child) {
+            @include adaptiveValue("margin-right", 42, 24);
+        }
+        &._icon-twitter {
+            font-size: rem(14);
+            color: $c_info;
+        }
+
+        &._icon-globe {
+            color: $c01;
+        }
+
+        &._icon-codepen {
+            color: $c08;
+        }
+        @media (any-hover: hover) {
+            &:hover {
+                opacity: 0.5;
+            }
+        }
+    }
+}

@@ -23,4 +23,5 @@ export { default as WeDoCard } from "./AboutPage/WeDoCard";
 
 export { default as Digits } from "./ServicesPage/Digits";
 export { default as Steps } from "./ServicesPage/Steps";
-export { default as StepsRow } from "./ServicesPage/StepsRow";
+
+export { default as Team } from "./WorkPage/Team";

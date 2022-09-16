@@ -3,7 +3,7 @@ import { Top } from "../../_components";
 
 const Digits: FC = () => {
     return (
-        <section className="page__digits digits">
+        <section className="digits">
             <div className="digits__container">
                 <Top label="What we do" className="digits__top">
                     <p className="digits__subtitle">

@@ -43,3 +43,16 @@ export interface IStep {
     img: string;
     imgWebp: string;
 }
+
+export interface ITeamItem {
+    name: string;
+    position: string;
+    img: string;
+    imgWebp: string;
+    link01: string;
+    link01Icon: string;
+    link02: string;
+    link02Icon: string;
+    link03: string;
+    link03Icon: string;
+}

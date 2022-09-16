@@ -5,6 +5,7 @@ import {
     ITestimonialSlide,
     IImages,
     ISphere,
+    ITeamItem,
 } from "./../models/models";
 
 import images from "./images";
@@ -213,6 +214,82 @@ const spheresItems: ISphere[] = [
     },
 ];
 
+//========================================================================================================================================================
+const teamItems: ITeamItem[] = [
+    {
+        img: avatarsImages.avatar09,
+        imgWebp: avatarsImages.avatar09_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link01",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link01",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link01",
+        link03Icon: "_icon-codepen",
+    },
+    {
+        img: avatarsImages.avatar11,
+        imgWebp: avatarsImages.avatar11_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link02",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link02",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link02",
+        link03Icon: "_icon-codepen",
+    },
+    {
+        img: avatarsImages.avatar10,
+        imgWebp: avatarsImages.avatar10_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link03",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link03",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link03",
+        link03Icon: "_icon-codepen",
+    },
+    {
+        img: avatarsImages.avatar12,
+        imgWebp: avatarsImages.avatar12_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link04",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link04",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link04",
+        link03Icon: "_icon-codepen",
+    },
+    {
+        img: avatarsImages.avatar13,
+        imgWebp: avatarsImages.avatar13_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link05",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link05",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link05",
+        link03Icon: "_icon-codepen",
+    },
+    {
+        img: avatarsImages.avatar14,
+        imgWebp: avatarsImages.avatar14_WEBP,
+        name: "Kerry Jones",
+        position: "Designer",
+        link01: "/twitter-link06",
+        link01Icon: "_icon-twitter",
+        link02: "/globe-link06",
+        link02Icon: "_icon-globe",
+        link03: "/codepen-link06",
+        link03Icon: "_icon-codepen",
+    },
+];
+
 export default {
     socialLinks,
     benefitsSlides,
@@ -221,4 +298,5 @@ export default {
     testimonialsCircles,
     companiesItems,
     spheresItems,
+    teamItems,
 };

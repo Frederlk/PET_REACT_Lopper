@@ -8,7 +8,7 @@ const { step01, step01_WEBP, step02, step02_WEBP, step03, step03_WEBP } = images
 
 const Steps: FC = () => {
     return (
-        <section className="page__steps steps">
+        <section className="steps">
             <Top className="steps__top" label="What we do" title="What we do">
                 <p className="top__subtitle">
                     Upper prior hundred links approach reedy, was to the than and the ever somehow surprised
