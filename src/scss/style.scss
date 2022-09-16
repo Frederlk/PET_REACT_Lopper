@@ -74,6 +74,7 @@ $responsiveType: 1;
 body {
     @extend %text_rg;
     background-color: $c08;
+    @include scrollbars(rem(15), $c01, $c08, border);
     // Скролл заблокирован
     ._lock & {
         overflow: hidden;
@@ -174,6 +175,7 @@ body {
 @import "_pages/services";
 @import "_pages/team";
 @import "_pages/gallery";
+@import "_pages/contacts";
 
 //========================================================================================================================================================
 

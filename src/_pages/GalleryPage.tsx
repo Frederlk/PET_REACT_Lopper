@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { Helmet } from "react-helmet";
 import { Newsletter, Preview, Testimonials } from "../_components";
-import Gallery from "../_containers/GalleryPage/Gallery";
+import { Gallery } from "../_containers";
 
 const GalleryPage: FC = () => {
     return (

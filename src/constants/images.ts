@@ -6,6 +6,8 @@ import bgService from "../assets/img/content/05.jpg";
 import bgService_WEBP from "../assets/img/content/05.webp";
 import bgContacts from "../assets/img/content/13.jpg";
 import bgContacts_WEBP from "../assets/img/content/13.webp";
+import contacts from "../assets/img/content/14.jpg";
+import contacts_WEBP from "../assets/img/content/14.webp";
 import building from "../assets/img/content/04.jpg";
 import building_WEBP from "../assets/img/content/04.webp";
 import intro from "../assets/img/content/02.jpg";
@@ -22,6 +24,8 @@ const defaultImages = {
     bgService_WEBP,
     bgContacts,
     bgContacts_WEBP,
+    contacts,
+    contacts_WEBP,
     building,
     building_WEBP,
     intro,

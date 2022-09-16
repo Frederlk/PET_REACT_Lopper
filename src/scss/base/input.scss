@@ -51,4 +51,9 @@ textarea {
 
 textarea.input {
     resize: none;
+    @include adaptiveValue("min-height", 234, 150);
+    padding-top: rem(10);
+    @media (min-width: $tablet) {
+        padding: rem(38) rem(54);
+    }
 }

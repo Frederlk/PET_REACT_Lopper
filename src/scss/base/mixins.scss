@@ -25,13 +25,6 @@
     @return $result;
 }
 
-// Grids
-@mixin gridCards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-    display: grid;
-    gap: $gap;
-    grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
-}
-
 // Адаптивное свойство (clamp)
 @mixin adaptiveValue(
     $property,
@@ -98,31 +91,14 @@
         }
     }
 }
-
-//========================================================================================================================================================
-@mixin inViewBasic($startPosX, $startPosY, $speed, $delay, $child: false) {
-    transform: translate($startPosX, $startPosY);
-    transition: transform #{$speed}s ease #{$delay}s, opacity #{$speed}s ease #{$delay}s;
-    opacity: 0;
-    visibility: hidden;
-    @if ($child == true) {
-        ._watcher-view & {
-            opacity: 1 !important ;
-            visibility: visible !important;
-            transform: translate(0, 0) !important;
-        }
-    } @else {
-        &._watcher-view {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translate(0, 0) !important;
-        }
-    }
-}
-
 //========================================================================================================================================================
 
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white, 50%)) {
+@mixin scrollbars(
+    $size,
+    $foreground-color,
+    $background-color: mix($foreground-color, white, 50%),
+    $border: false
+) {
     // For Google Chrome
     &::-webkit-scrollbar {
         width: $size;
@@ -132,11 +108,18 @@
     &::-webkit-scrollbar-thumb {
         background: $foreground-color;
         overflow: hidden;
-        border-radius: rem(8);
+        @if ($border) {
+            border-left: 2px solid $background-color;
+            border-right: 2px solid $background-color;
+        }
     }
 
     &::-webkit-scrollbar-track {
         background: $background-color;
+        @if ($border) {
+            border-left: 2px solid $background-color;
+            border-right: 2px solid $background-color;
+        }
     }
 
     // For Internet Explorer

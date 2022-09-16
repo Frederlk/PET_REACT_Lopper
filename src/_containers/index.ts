@@ -27,3 +27,6 @@ export { default as Steps } from "./ServicesPage/Steps";
 export { default as Team } from "./WorkPage/Team";
 
 export { default as Gallery } from "./GalleryPage/Gallery";
+
+export { default as Info } from "./ContactsPage/Info";
+export { default as Touch } from "./ContactsPage/Touch";

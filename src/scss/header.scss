@@ -35,7 +35,7 @@
 
     &__logo {
         position: relative;
-        z-index: 20;
+        z-index: 35;
         margin-right: rem(10);
         @media (min-width: $tablet) {
             @include adaptiveValue("margin-right", 66, 0);
@@ -118,18 +118,19 @@
         visibility: hidden;
         transition: visibility 0.5s ease 0s, opacity 0.5s ease 0s;
         padding: rem(70) 0px rem(30) 0px;
-        z-index: 10;
+        @include scrollbars(rem(5), $c01, transparent);
+        z-index: 25;
         &::before {
             content: "";
             position: fixed;
-            width: 100%;
+            width: calc(100% - rem(5));
             height: rem(70);
             top: 0;
             left: 0;
             background-color: $c08;
             opacity: 0;
             visibility: hidden;
-            z-index: 11;
+            z-index: 30;
         }
         .home-wrapper &,
         ._scroll & {
