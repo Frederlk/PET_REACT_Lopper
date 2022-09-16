@@ -9,7 +9,7 @@ const MenuLinks: FC = () => {
             if (type === "menu" && (title as string) !== "Gallery" && (title as string) !== "Contacts")
                 return (
                     <li key={`${path}` || i} className="menu__item">
-                        <NavLink to={`${path}`} className="menu__link ">
+                        <NavLink to={`${path}`} end className="menu__link">
                             {title}
                         </NavLink>
                     </li>

@@ -22,7 +22,7 @@ const Gallery: FC = () => {
             onInit={onInit}
             speed={500}
             elementClassNames="gallery"
-            licenseKey={process.env.REACT_APP_LIGHTGALLERY_API_KEY}
+            licenseKey="7EC452A9-0CFD441C-BD984C7C-17C8456E"
         >
             {galleryItems}
         </LightGallery>
