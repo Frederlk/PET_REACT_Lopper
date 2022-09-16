@@ -59,6 +59,7 @@
     &__top {
         @include adaptiveValue("padding-bottom", 70, 22);
         text-align: center;
+        padding: 0px rem(15);
         @media (min-width: $mobile) {
             margin: 0 auto;
             max-width: rem(560);

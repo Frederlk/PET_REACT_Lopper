@@ -1,6 +1,7 @@
 .team {
     @include adaptiveValue("padding-top", 180, 60);
     &__top {
+        padding: 0px rem(15);
         @include adaptiveValue("padding-bottom", 250, 80);
         text-align: center;
         @media (min-width: $mobile) {

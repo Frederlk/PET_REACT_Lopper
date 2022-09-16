@@ -5,13 +5,24 @@ import { Link as LinkGoto } from "react-scroll";
 import { RouteNames } from "../../routes";
 import { images } from "../../constants";
 import { Picture } from "../../_components";
+import { isMobile } from "../../helpers/functions";
+import { useEventListener } from "../../hooks";
+
+const fixHeight = () => {
+    if (isMobile.any()) {
+        document.documentElement.classList.add("_touch");
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+};
+const { bgMain_WEBP, bgMain } = images.defaultImages;
 
 const Mainscreen: FC = () => {
-    const { bgMain_WEBP, bgMain } = images.defaultImages;
+    useEventListener("resize", fixHeight);
 
     return (
         <section className="mainscreen">
-            <div className="mainscreen__container ">
+            <div data-fullscreen className="mainscreen__container ">
                 <div className="mainscreen__flex">
                     <div className="mainscreen__content">
                         <h2 className="mainscreen__label">What we do?</h2>

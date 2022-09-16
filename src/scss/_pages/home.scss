@@ -9,6 +9,12 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .touch & {
+                min-height: calc(var(--vh, 1vh) * 100);
+                @media (max-width: $mobile) {
+                    transition: height 0.2s;
+                }
+            }
         }
     }
 
@@ -22,6 +28,12 @@
             min-height: 100vh;
             padding-bottom: rem(30);
             flex-direction: column;
+            .touch & {
+                min-height: calc(var(--vh, 1vh) * 100);
+                @media (max-width: $mobile) {
+                    transition: height 0.2s;
+                }
+            }
         }
         @media (max-width: em(600.98)) {
             padding-top: rem(100);
