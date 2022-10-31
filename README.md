@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+[Lopper](https://pet-react-lopper.vercel.app/)
+----------------------------------------------------------------------------------------------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A fully responsive Business Services website. Routing between Home, Services, Work, About, Gallery and Contacts pages. Sliders, Gallery, Spollers. All forms are made with Formik and validatable by Yup.
 
-## Available Scripts
+### Stack
 
-In the project directory, you can run:
+*   React
+*   TypeScript
+*   SCSS
+*   Redux
+*   Formik
+*   Swiper
+*   LightGallery
+*   react-router-dom
 
-### `npm start`
+### External Links
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+*   [Home Page](https://pet-react-lopper.vercel.app/)
+*   [Services Page](https://pet-react-lopper.vercel.app/services)
+*   [Work Page](https://pet-react-lopper.vercel.app/work)
+*   [About Page](https://pet-react-lopper.vercel.app/about)
+*   [Gallery Page](https://pet-react-lopper.vercel.app/gallery)
+*   [Contacts Page](https://pet-react-lopper.vercel.app/contacts)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Built Date
 
-### `npm test`
+September, 2022
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Lopper_1](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_1.jpg?alt=media&token=4950a451-9ecf-44b3-9e4b-3589088e0b51)
 
-### `npm run build`
+![Lopper_2](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_2.jpg?alt=media&token=f657588e-3f33-43b9-8e9c-99e3a056e264)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Lopper_3](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_3.jpg?alt=media&token=b5720144-62f2-4609-ac61-8a3e2782ed3b)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![Lopper_4](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_4.jpg?alt=media&token=ad6364cb-0eb5-4a86-8624-d17d077aab21)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Lopper_5](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_5.jpg?alt=media&token=920667ae-743c-4ac6-bddf-15f4b7af8fb6)
 
-### `npm run eject`
+![Lopper_6](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_6.jpg?alt=media&token=c60b30b7-9c18-4f43-804d-2448877439e0)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Lopper_7](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_7.jpg?alt=media&token=8af1fc72-162f-46ce-be8d-7bc1be90a528)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Lopper_8](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_8.jpg?alt=media&token=e5969a12-defd-4c86-b17d-265ba8900084)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Lopper_9](https://firebasestorage.googleapis.com/v0/b/petrinich-sergey----portfolio.appspot.com/o/PET_REACT_Lopper%2FLopper_9.jpg?alt=media&token=236ae5f3-5fbe-4b8b-8b78-a73858e0f49f)
